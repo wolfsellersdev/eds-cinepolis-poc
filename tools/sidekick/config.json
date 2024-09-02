@@ -10,7 +10,7 @@
         "isPalette": true,
         "passConfig": true,
         "paletteRect": "top: 50px; bottom: 10px; right: 10px; left: auto; width:800px; height: calc(100vh - 60px)",
-        "repo": "wolfsellers-sandbox-dev"
+        "includePaths": ["/content/dam/cinepolis"]
       }
     ]
   }
