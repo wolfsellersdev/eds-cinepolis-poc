@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--eds-cinepolis-poc--wolfsellersdev.hlx.page/
-- Live: https://main--eds-cinepolis-poc--wolfsellersdev.hlx.live/
+- Preview: https://dev--eds-cinepolis-poc--wolfsellersdev.hlx.page/
+- Live: https://dev--eds-cinepolis-poc--wolfsellersdev.hlx.live/
 
 ## Installation
 
