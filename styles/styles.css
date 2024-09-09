@@ -19,31 +19,30 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
-    /*CINEPOLIS COLORS */
-  --color-white:          #FFFFFF;
+    /* CINEPOLIS COLORS */
+  --color-white:          #FFF;
   --color-white-op5:      rgba(255 255 255 / 0.5%);
   --color-primary:        #05102A;
   --color-secondary:      #4781FF;
   --color-black19:        #192540;
   --color-white-50:       rgba(255 255 255 / 0.5%);
   --color-backg-blue-light: #EDF2FF;
-  --color-blue-B5:          #B5CDFF;
+  --color-blue-b5:          #B5CDFF;
   --color-blue-15:          #15274e;
   --color-gray45:            #455875;
-  --color-grayF5:            #F5F5F5;   
-  --color-grayC7:            #C7CDD6;         
-  --color-grayFD:            #FDFDFD;         
-  --color-grayDA:            #DAE6FF;         
-  --color-grayEC:            #ECEEF1;   
-  --color-grayA2:            #A2ACBA;    
-  --color-grayF5:            #F5F6F8;  
+  --color-grayf5:            #F5F5F5;   
+  --color-grayc7:            #C7CDD6;         
+  --color-grayfd:            #FDFDFD;         
+  --color-grayda:            #DAE6FF;         
+  --color-grayec:            #ECEEF1;   
+  --color-graya2:            #A2ACBA;  
   --color-link-15:           #15274D;
 
   /*bkg gradients*/
-  --bkg-gradient-herobanner: linear-gradient(0.25turn, rgba(6 17 43 / 1), rgba(0 0 0 / 0));
-  --bkg-gradient-herobanner-mobile: linear-gradient( rgba(6 17 43 / 1), rgba(0 0 0 / 0));
-  --button-box-shadow: 2px 9px 12px rgba(0 0 0 / 0.08);
-  --pop-up-mask: rgba(5 16 42 / 7%);
+  --bkg-gradient-herobanner: linear-gradient(0.25turn, rgba(6 17 43 /100%), rgba(0 0 0 /0%));
+  --bkg-gradient-herobanner-mobile: linear-gradient( rgba(6 17 43 /100%), rgba(0 0 0 /0%));
+  --button-box-shadow: 2px 9px 12px rgba(0 0 0 / 8%);
+  --pop-up-mask: rgba(5 16 42 /7%);
 
   /*Layout*/
   --layout-cinepolis: 1440px;
@@ -53,7 +52,7 @@
 
   /*Border-radius*/
   --radiusitems: 8px;
-  --radius__items: 40px;
+  --radius-items: 40px;
   --radiuspopup: 24px;
 
   /* fonts */
