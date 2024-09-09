@@ -38,19 +38,19 @@
   --color-graya2:            #A2ACBA;  
   --color-link-15:           #15274D;
 
-  /*bkg gradients */
+  /* bkg gradients */
   --bkg-gradient-herobanner: linear-gradient(0.25turn, rgba(6 17 43 /100%), rgba(0 0 0 /0%));
   --bkg-gradient-herobanner-mobile: linear-gradient( rgba(6 17 43 /100%), rgba(0 0 0 /0%));
   --button-box-shadow: 2px 9px 12px rgba(0 0 0 / 8%);
   --pop-up-mask: rgba(5 16 42 /7%);
 
-  /*Layout */
+  /* Layout */
   --layout-cinepolis: 1440px;
   --layout-content: 900px;
   --layout-content-lg: 1280px;
   --layout-content-lx: 1380px;
 
-  /*Border-radius */
+  /* Border-radius */
   --radiusitems: 8px;
   --radius-items: 40px;
   --radiuspopup: 24px;
@@ -78,7 +78,7 @@
   --heading-font-size-xs: 22px;
   --heading-font-56: 56px;
 
-      /*CINEPOLIS  heading sizes */
+      /* CINEPOLIS  heading sizes */
   --head-font-40: 40px;
   --head-font-32: 32px;
   --body-font-p-24: 24px;

@@ -69,7 +69,7 @@ main .section div.hero-banner-wrapper {
 }
 
 @media (width >= 1025px) {
-    .hero-banner.block > div:after {
+    .hero-banner.block > div::after {
         background: var(--bkg-gradient-herobanner);
         left: 0;
         top: 0; 
@@ -88,15 +88,17 @@ main .section div.hero-banner-wrapper {
     .hero-banner.block > div {
         height: 770px;
     }
+
     .hero-banner.block > div div {
         height: 770px;
         align-self: end;
     }
+
     .hero-banner.block > div::after {
         background: var(--bkg-gradient-herobanner-mobile);
     }
     
-    .hero-banner.block > div div::last-child {
+    .hero-banner.block > div div:last-child {
         padding: 0  28px 25px;
     }
 
