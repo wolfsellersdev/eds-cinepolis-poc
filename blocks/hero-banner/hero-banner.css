@@ -1,7 +1,6 @@
 
 main .section div.hero-banner-wrapper {
     display: block;
-    background: aliceblue;
     max-width: none;
     padding: 0;
 }
@@ -32,9 +31,10 @@ main .section div.hero-banner-wrapper {
 
 .hero-banner.block > div div:last-child {
     height: auto;
+    z-index: 3;
 }
 
-.hero-banner.block > div div picture {
+.hero-banner.block > div div picture img {
     position: absolute;
     top: 0;
     left:0;
@@ -50,6 +50,7 @@ main .section div.hero-banner-wrapper {
 }
 
 .hero-banner.block > div div h2 {
+    color: var(--background-color);
     font-size: var(--heading-font-56);
     line-height: 56px;
     position: relative;
@@ -62,6 +63,53 @@ main .section div.hero-banner-wrapper {
 }
 
 .hero-banner.block > div div h2 + p {
+    font-size: var(--body-font-p-24);
+    color: var(--background-color);
+    line-height: 28.8px;
     position: relative;
+    font-weight: 700;
     z-index: 1;
+    margin: 0;
+}
+
+@media (width >= 1025px) {
+    .hero-banner.block > div:after {
+        background: var(--bkg-gradient-herobanner);
+        left: 0;
+        top: 0; 
+    }
+    
+    .hero-banner.block > div div:last-child {
+        padding: 0 80px;
+    }
+
+    .hero-banner.block > div div h2 {
+        margin: 0 0 25px 0;
+    }
+}
+
+@media (width <= 1024px) {
+    .hero-banner.block > div {
+        height: 770px;
+    }
+    .hero-banner.block > div div {
+        height: 770px;
+        align-self: end;
+    }
+    .hero-banner.block > div:after {
+        background: var(--bkg-gradient-herobanner-mobile);
+    }
+    
+    .hero-banner.block > div div:last-child {
+        padding: 0  28px 25px;
+    }
+
+    .hero-banner.block > div div h2 {
+        margin: 0 0 25px 0;
+    }
+    .hero-banner.block > div div h2 + p {
+        font-size: var(--body-font-p-18);
+        line-height: 22.5px;
+        font-weight: 500;
+    }
 }
