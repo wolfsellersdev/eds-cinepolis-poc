@@ -13,7 +13,7 @@ main .section div.hero-banner-wrapper {
     height: 600px;
 }
 
-.hero-banner.block > div:after {
+.hero-banner.block > div::after {
     z-index: 1;
     content: '';
     display: block;
@@ -43,10 +43,6 @@ main .section div.hero-banner-wrapper {
     height: 100%;
     object-fit: cover;
     overflow: hidden;
-}
-
-.hero-banner.block > div div picture img {
-    width: 100%;
 }
 
 .hero-banner.block > div div h2 {
@@ -84,7 +80,7 @@ main .section div.hero-banner-wrapper {
     }
 
     .hero-banner.block > div div h2 {
-        margin: 0 0 25px 0;
+        margin: 0 0 25px;
     }
 }
 
@@ -96,16 +92,16 @@ main .section div.hero-banner-wrapper {
         height: 770px;
         align-self: end;
     }
-    .hero-banner.block > div:after {
+    .hero-banner.block > div::after {
         background: var(--bkg-gradient-herobanner-mobile);
     }
     
-    .hero-banner.block > div div:last-child {
+    .hero-banner.block > div div::last-child {
         padding: 0  28px 25px;
     }
 
     .hero-banner.block > div div h2 {
-        margin: 0 0 25px 0;
+        margin: 0 0 25px;
     }
     .hero-banner.block > div div h2 + p {
         font-size: var(--body-font-p-18);
