@@ -1,0 +1,67 @@
+
+main .section div.hero-banner-wrapper {
+    display: block;
+    background: aliceblue;
+    max-width: none;
+    padding: 0;
+}
+
+.hero-banner.block > div {
+    display: grid;
+    grid-template-areas: "herobanner";
+    position: relative;
+    max-width: none;
+    height: 600px;
+}
+
+.hero-banner.block > div:after {
+    z-index: 1;
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-banner.block > div div {
+    position: relative;
+    grid-area: herobanner;
+    align-self: center;
+    height: 600px;
+}
+
+.hero-banner.block > div div:last-child {
+    height: auto;
+}
+
+.hero-banner.block > div div picture {
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.hero-banner.block > div div picture img {
+    width: 100%;
+}
+
+.hero-banner.block > div div h2 {
+    font-size: var(--heading-font-56);
+    line-height: 56px;
+    position: relative;
+    letter-spacing: -4px;
+    z-index: 1;
+}
+
+.hero-banner.block > div div h2 strong {
+    font-weight: 800;
+}
+
+.hero-banner.block > div div h2 + p {
+    position: relative;
+    z-index: 1;
+}
