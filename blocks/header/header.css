@@ -1,1 +1,151 @@
 /* stylelint-disable no-empty-source */
+
+header.header-wrapper {
+    position: relative;
+}
+
+header.header-wrapper .header.block {
+    background: var(--color-primary);
+    box-sizing: border-box;
+    padding: 24px 32px;
+    position: fixed;
+    display: flex;
+    height: 92px;
+    width: 100%;
+    z-index: 4;
+}
+
+#nav {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1376px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#nav .section:nth-child(2) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex:1 ;
+}
+
+#nav .section:last-child {
+    margin-left: 29px;
+}
+
+#nav .section ul {
+    display: flex;
+    column-gap: 32px;
+    list-style: none;
+    line-height: 19.2px;
+    align-items: center;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+#nav .section ul li a {
+    color: var(--color-white);
+    font-size: var(--body-font-p-16);
+}
+
+#nav .section ul >li:nth-child(2) ul {
+    background: var(--color-primary);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    column-gap: 25px;
+    width: 100%;
+    top: 92px;
+    left: 0;
+}
+
+.section:nth-child(1) .default-content-wrapper > ul >li:nth-child(2) {
+    background: var(--color-secondary);
+    border-radius: var(--radiusitems);
+    padding: 12px 15px;
+    max-width: 120px;
+}
+
+#nav .section ul >li:nth-child(2) >ul >li {
+    position: relative;   
+}
+
+#nav .section ul >li:nth-child(2) >ul >li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+#nav .section .default-content-wrapper .icon-footer-icon {
+    width: 44px;
+    height: 44px;
+}
+
+/* background: pink; */
+#nav .section .default-content-wrapper >ul >li:nth-child(2) > ul {
+    padding: 117px 0 80px;
+    display: none;
+}
+
+#nav .section:nth-child(1) .default-content-wrapper > ul >li:nth-child(2) > ul >li {
+    min-width: 208px;
+}
+
+#nav .section:nth-child(1) .default-content-wrapper > ul >li:nth-child(2):hover > ul {
+    display: flex;
+    width: 100%;
+}
+
+#nav .section .default-content-wrapper ul li ul li ul {
+    border-radius: var(--radiuspopup);
+    background: var(--color-white);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    column-gap: normal;
+    min-height: 242px;
+    max-width: 208px;
+    position: static;
+}
+
+#nav .section .default-content-wrapper ul li ul li ul li {
+    margin-top: auto;
+}
+
+#nav .section .default-content-wrapper ul li ul li:nth-child(2) ul li:last-child {
+    word-break: break-all;
+}
+
+#nav .section .default-content-wrapper ul li ul li ul li:last-child {
+    background: var(--color-gray45);
+    font-size: var(--body-font-p-13);
+    border-radius: 0 0 var(--radiuspopup) var(--radiuspopup);
+    color: var(--color-white);
+    line-height: 15.85px;
+    font-weight: 600;
+    padding: 17px;
+}
+
+#nav .section .default-content-wrapper ul li ul li ul picture img {
+    max-width: 160px;
+    max-height: 64px;
+    width: auto;
+}
+
+@media (width <= 960px) {
+    #nav >.section:first-child .default-content-wrapper >ul {
+        flex-direction: column;
+    }
+
+    #nav .section .default-content-wrapper >ul >li:nth-child(2) > ul {
+        padding: 77px 25px 0;
+    }
+}
