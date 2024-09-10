@@ -21,6 +21,7 @@
 .footer.block .section.contact-container h3 {
     font-size: var(--head-font-32);
     line-height: var(--head-font-32);
+    text-align: center;
     margin: 0 0 13px;
 }
 
@@ -165,9 +166,28 @@
 }
 
 @media (width <= 1024px) {
+    .footer.block .contact.section-contact.block {
+        padding: 65px 20px 0;
+    }
+    
+    .footer.block .section.contact-container h3 {
+        font-size: var(--head-font-20);
+        line-height: 24px;
+        margin: 0 0 7px;
+    }
+
+    .footer.block .section.contact-container p:nth-child(2) {
+        margin-bottom: 45px;
+    }
+
+    .footer.block .section.contact-container p:nth-child(3) {
+        font-size: var(--body-font-p-18);
+        line-height: 21.6px;
+    }
+
     .footer.block .section:nth-child(2) {
-        margin-top: 90px;
-        padding-bottom: 18;
+        margin-top: 87px;
+        padding-bottom: 0;
     }
 
     .footer.block .section:nth-child(2) .default-content-wrapper {
@@ -197,5 +217,36 @@
     .footer.block .section.logosleft-container {
         flex-direction: column;
         padding: 13px 17px;
+    }
+
+    .footer.block .section.logosleft-container .logosleft {
+        width: 100%;
+    }
+
+    .footer.block .section.logosleft-container .logosleft div p {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: normal;
+        margin: 0;
+    }
+
+    .footer.block .section.logosleft-container .logosleft p span.icon {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 58px;
+    }
+
+    .footer.block .section.logosleft-container .logosleft p span.icon img {
+        width: auto;
+        height: fit-content;
+    }
+
+    .footer.block .section.logosleft-container .logosrigth-wrapper {
+        justify-content: center;
+        margin: 48px 0 50px;
     }
 }
