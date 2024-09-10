@@ -21,11 +21,11 @@
 
   /* CINEPOLIS COLORS */
   --color-white:          #FFF;
-  --color-white-op5:      rgba(255 255 255 / 0.5%);
+  --color-white-op5:      rgba(255 255 255 / 50%);
   --color-primary:        #05102A;
   --color-secondary:      #4781FF;
   --color-black19:        #192540;
-  --color-white-50:       rgba(255 255 255 / 0.5%);
+  --color-white-50:       rgba(255 255 255 / 50%);
   --color-backg-blue-light: #EDF2FF;
   --color-blue-b5:          #B5CDFF;
   --color-blue-15:          #15274e;
