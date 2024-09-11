@@ -1,1 +1,28 @@
 /* stylelint-disable no-empty-source */
+
+main > .section.information-card-container {
+    margin: 69px 0 80px;
+}
+
+.section.information-card-container {
+    background: var(--color-backg-blue-light);
+}
+
+.section .information-card.block {
+    margin: 0 auto;
+    display: grid;
+    max-width: var(--layout-content);
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+}
+
+.section .information-card.block h2 {
+    margin: 0;
+}
+
+.section .information-card.block >div:nth-child(1) {
+    border: 1px solid saddlebrown;
+    grid-column-start: 1;
+    grid-column-end:   4;
+}
