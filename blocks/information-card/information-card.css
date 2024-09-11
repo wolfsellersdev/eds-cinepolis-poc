@@ -1,11 +1,11 @@
 /* stylelint-disable no-empty-source */
 
-main > .section.information-card-container {
-    margin: 69px 0 80px;
-}
-
 .section.information-card-container {
     background: var(--color-backg-blue-light);
+}
+
+main > .section.information-card-container {
+    margin: 69px 0 80px;
 }
 
 .section .information-card.block {
@@ -23,6 +23,5 @@ main > .section.information-card-container {
 
 .section .information-card.block >div:nth-child(1) {
     border: 1px solid saddlebrown;
-    grid-column-start: 1;
-    grid-column-end:   4;
+    grid-column: 1 / 4;
 }

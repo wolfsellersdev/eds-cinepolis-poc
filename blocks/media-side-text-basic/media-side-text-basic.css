@@ -27,14 +27,14 @@ main > .section.media-side-text-basic-container {
     line-height: var(--head-font-32);
     font-weight: 800;
 }
-.media-side-text-basic.block div h2#misión+ p {
-    margin: 0 0 40px;
-}
-
 .media-side-text-basic.block div p {
     font-size: var(--body-font-p-18);
     line-height: 22.5px;
     font-weight: 400;
+}
+
+.media-side-text-basic.block >div div:nth-child(2) h2:first-child + p {
+    margin: 0 0 40px;
 }
 
 @media (width <= 1024px) {
@@ -44,7 +44,7 @@ main > .section.media-side-text-basic-container {
     }
 
     .media-side-text-basic.block div h2,
-    .media-side-text-basic.block div h2#misión+ p {
+    .media-side-text-basic.block >div div:nth-child(2) h2:first-child + p {
         margin: 0 0 12px;
     }
 }
