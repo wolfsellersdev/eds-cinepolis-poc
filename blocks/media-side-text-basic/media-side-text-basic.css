@@ -27,6 +27,7 @@ main > .section.media-side-text-basic-container {
     line-height: var(--head-font-32);
     font-weight: 800;
 }
+
 .media-side-text-basic.block div p {
     font-size: var(--body-font-p-18);
     line-height: 22.5px;
