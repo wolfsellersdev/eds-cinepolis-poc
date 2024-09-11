@@ -5,6 +5,7 @@ main > .section.impact-card-container {
     margin: 146px 0 80px;
 }
 
+    /* align-items: stretch; */
 .impact-card.block {
     margin: 69px auto 82px;
     display: grid;
@@ -18,7 +19,6 @@ main > .section.impact-card-container {
     border-radius: 40px;
     position: relative;
     padding: 0 40px;
-    /* align-items: stretch; */
 }
 
 .impact-card.block > div div {
