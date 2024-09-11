@@ -1,1 +1,51 @@
 /* stylelint-disable no-empty-source */
+
+main > .section.media-side-text-basic-container {
+    margin: 0;
+}
+
+.media-side-text-basic.block {
+    max-width: var(--layout-content);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.media-side-text-basic.block >div {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.media-side-text-basic.block >div div {
+    flex: 1;
+}
+
+.media-side-text-basic.block div h2 {
+    margin: 0 0 20px;
+    font-size: var(--head-font-32);
+    line-height: var(--head-font-32);
+    font-weight: 800;
+}
+
+.media-side-text-basic.block div p {
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+    font-weight: 400;
+}
+
+.media-side-text-basic.block >div div:nth-child(2) h2:first-child + p {
+    margin: 0 0 40px;
+}
+
+@media (width <= 1024px) {
+    .media-side-text-basic.block >div {
+        flex-direction: column;
+        row-gap: 58px;
+    }
+
+    .media-side-text-basic.block div h2,
+    .media-side-text-basic.block >div div:nth-child(2) h2:first-child + p {
+        margin: 0 0 12px;
+    }
+}

@@ -1,1 +1,57 @@
 /* stylelint-disable no-empty-source */
+
+
+main > .section.simple-title-paragraph-container {
+    margin: 120px auto 80px;
+}
+
+.simple-title-paragraph-container .simple-title-paragraph-wrapper {
+    max-width: var(--layout-content);
+}
+
+.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.block div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.simple-title-paragraph-container h2 {
+    margin: 0 0 19px;
+    font-size: var(--heading-font-size-xl);
+    line-height: 40px;
+    font-weight: 800;
+}
+
+.simple-title-paragraph-container p {
+    line-height: 25px;
+    font-weight: 500;
+}
+
+.simple-title-paragraph.block h2#programas,
+.simple-title-paragraph.block h2#programas + p {
+    width: 100%;
+    text-align: left;
+}
+
+@media (width <= 1024px) {
+    main > .section.simple-title-paragraph-container {
+        margin: 65px auto;
+    }
+
+    .simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.block div div {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .simple-title-paragraph-container h2 {
+        margin: 0 0 15px;
+        font-size: var(--body-font-p-24);
+        line-height: 28px;
+    }
+
+    .simple-title-paragraph.block p {
+        font-size: var(--body-font-p-18);
+        line-height: 22.5px;
+    }
+}
