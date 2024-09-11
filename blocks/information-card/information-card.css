@@ -35,8 +35,9 @@ main > .section.information-card-container {
     height: 80px;
 }
 
-.information-card.block > div h2 {
+.information-card.block > div h3 {
     font-size: var(--body-font-p-24);
+    margin-bottom: 17px;
     line-height: 28.8px;
     text-align: center;
     font-weight: 700;
@@ -53,9 +54,11 @@ main > .section.information-card-container {
     grid-column: 1 / 4;
 }
 
-.section .information-card.block >div:nth-child(1) h2 {
+.section .information-card.block >div:nth-child(1) h2,
+.section .information-card.block >div:nth-child(1) h3 {
     font-size: var(--head-font-40);
     line-height: var(--head-font-40);
+    margin-bottom: 48px;
     font-weight: 800;
 }
 
@@ -84,8 +87,9 @@ main > .section.information-card-container {
         font-size: var(--body-font-p-20);
         line-height: 24px;
     }
-    
-    .section .information-card.block >div:nth-child(1) h2 {
+
+    .section .information-card.block >div:nth-child(1) h2,
+    .section .information-card.block >div:nth-child(1) h3 {
         font-size: var(--body-font-p-28);
         line-height: var(--body-font-p-28);
         margin-bottom: 30px;
@@ -98,7 +102,8 @@ main > .section.information-card-container {
 }
 
 @media (width >= 390px) {
-    .section .information-card.block >div:nth-child(1) h2 {
+    .section .information-card.block >div:nth-child(1) h2,
+    .section .information-card.block >div:nth-child(1) h3 {
         white-space: nowrap;
     }   
 }

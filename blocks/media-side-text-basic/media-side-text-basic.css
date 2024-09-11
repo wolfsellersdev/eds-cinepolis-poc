@@ -21,7 +21,8 @@ main > .section.media-side-text-basic-container {
     flex: 1;
 }
 
-.media-side-text-basic.block div h2 {
+.media-side-text-basic.block div h2,
+.media-side-text-basic.block div h3 {
     margin: 0 0 20px;
     font-size: var(--head-font-32);
     line-height: var(--head-font-32);
@@ -34,7 +35,8 @@ main > .section.media-side-text-basic-container {
     font-weight: 400;
 }
 
-.media-side-text-basic.block >div div:nth-child(2) h2:first-child + p {
+.media-side-text-basic.block >div div:nth-child(2) h2:first-child + p,
+.media-side-text-basic.block >div div:nth-child(2) h3:first-child + p {
     margin: 0 0 40px;
 }
 
@@ -45,7 +47,9 @@ main > .section.media-side-text-basic-container {
     }
 
     .media-side-text-basic.block div h2,
-    .media-side-text-basic.block >div div:nth-child(2) h2:first-child + p {
+    .media-side-text-basic.block div h3,
+    .media-side-text-basic.block >div div:nth-child(2) h2:first-child + p,
+    .media-side-text-basic.block >div div:nth-child(2) h3:first-child + p {
         margin: 0 0 12px;
     }
 }
