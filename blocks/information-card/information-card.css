@@ -14,14 +14,91 @@ main > .section.information-card-container {
     max-width: var(--layout-content);
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    column-gap: 60px;
     justify-items: center;
+    padding: 80px 0;
 }
 
-.section .information-card.block h2 {
-    margin: 0;
+.information-card.block > div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.information-card.block > div img {
+    width: 99.67px;
+    height: 80px;
+}
+
+.information-card.block > div:not(:last-child) img {
+    width: 80px;
+    height: 80px;
+}
+
+.information-card.block > div h2 {
+    font-size: var(--body-font-p-24);
+    line-height: 28.8px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.information-card.block > div p:last-child {
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+    margin-top: auto;
+    font-weight: 400;
 }
 
 .section .information-card.block >div:nth-child(1) {
-    border: 1px solid saddlebrown;
     grid-column: 1 / 4;
+}
+
+.section .information-card.block >div:nth-child(1) h2 {
+    font-size: var(--head-font-40);
+    line-height: var(--head-font-40);
+    font-weight: 800;
+}
+
+@media (width <= 1024px) {
+    .section .information-card.block {
+        display: flex;
+        flex-direction: column;
+        padding: 65px 0 34px;
+    }
+
+    .information-card.block > div img {
+        width: 50px;
+        height: 40px;
+    }
+    
+    .information-card.block > div:not(:last-child) img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .section .information-card.block >div:not(:first-child) {
+        margin-bottom: 30px;
+    }
+
+    .section .information-card.block >div:nth-child(1) h2 {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+        margin-bottom: 30px;
+    }
+
+    .information-card.block > div h2 {
+        font-size: var(--body-font-p-20);
+        line-height: 24px;
+    }
+    
+    .information-card.block > div p:last-child {
+        font-size: var(--body-font-p-16);
+        line-height: 20px;
+    }
+}
+
+@media (width >= 390px) {
+    .section .information-card.block >div:nth-child(1) h2 {
+        white-space: nowrap;
+    }   
 }
