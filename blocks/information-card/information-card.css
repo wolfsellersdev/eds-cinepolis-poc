@@ -80,15 +80,15 @@ main > .section.information-card-container {
         margin-bottom: 30px;
     }
 
+    .information-card.block > div h2 {
+        font-size: var(--body-font-p-20);
+        line-height: 24px;
+    }
+    
     .section .information-card.block >div:nth-child(1) h2 {
         font-size: var(--body-font-p-28);
         line-height: var(--body-font-p-28);
         margin-bottom: 30px;
-    }
-
-    .information-card.block > div h2 {
-        font-size: var(--body-font-p-20);
-        line-height: 24px;
     }
     
     .information-card.block > div p:last-child {
