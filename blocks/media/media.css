@@ -1,1 +1,23 @@
 /* stylelint-disable no-empty-source */
+
+
+main .section.media-container {
+    margin: 0;
+}
+
+.media.rounded.block {
+    margin: 0 auto 78px;
+    display: flex;
+    max-width: var(--layout-content);
+}
+
+.media.rounded.block p:last-child {
+    font-size: var(--body-font-p-12);
+    margin-top: 3px;
+    line-height: 14.4px;
+    font-weight: 600;
+}
+
+.media.rounded.block picture img {
+    border-radius: var(--radius-items);
+}

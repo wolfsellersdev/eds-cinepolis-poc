@@ -1,1 +1,98 @@
 /* stylelint-disable no-empty-source */
+
+
+main > .section.impact-card-container {
+    margin: 146px 0 80px;
+}
+
+    /* align-items: stretch; */
+.impact-card.block {
+    margin: 69px auto 82px;
+    display: grid;
+    max-width: var(--layout-content);
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    column-gap: 40px;
+    justify-items: center;
+    border: 1px solid var(--color-grayda);
+    box-sizing: border-box;
+    border-radius: 40px;
+    position: relative;
+    padding: 0 40px;
+}
+
+.impact-card.block > div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.impact-card.block > div h2 {
+    font-size: var(--head-font-40);
+    line-height: var(--head-font-40);
+    text-align: center;
+    font-weight: 800;
+    margin: 0 0 40px;
+}
+
+.impact-card.block > div div h2 {
+    font-size: var(--body-font-p-20);
+    line-height: 24px;
+    font-weight: 700;
+    margin: 0 0 17px;
+}
+
+.impact-card.block > div:first-child >div h2 {
+    font-size: var(--head-font-40);
+    line-height: var(--head-font-40);
+    margin: 11px 0 0;
+    font-weight: 800;
+}
+
+.impact-card.block >div:nth-child(1) {
+    display: flex;
+    grid-column: 1 / 4;
+    position: absolute;
+    top: -82px;
+}
+
+.impact-card.block >div:not(:first-child) {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.impact-card.block >div:not(:last-child)::after {
+    content: '';
+    height: 70%;
+    display: block;
+    border-right: 1px solid var(--color-blue-b5);
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: -20px;
+}
+
+.impact-card.block >div:nth-child(1)::after {
+    content: none;
+}
+
+.impact-card.block >div:not(:first-child) >div:first-child {
+    flex-direction: row;
+    margin-bottom: 6px;
+    column-gap: 5px;
+    align-items: flex-start;
+}
+
+.impact-card.block >div:not(:first-child) >div:first-child h2 {
+    font-size: var(--head-font-40);
+    line-height: var(--head-font-40);
+    font-weight: 800;
+    margin: 0;
+}
+
+.impact-card.block >div:not(:first-child) div:last-child {
+    margin-top: auto;
+    font-weight: 500;
+}
