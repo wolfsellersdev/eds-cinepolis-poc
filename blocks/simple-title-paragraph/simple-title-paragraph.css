@@ -23,14 +23,14 @@ main > .section.simple-title-paragraph-container {
     font-weight: 800;
 }
 
-.simple-title-paragraph.left.block h2,
-.simple-title-paragraph.left.block p {
-    text-align: left;
-}
-
 .simple-title-paragraph-container p {
     line-height: 25px;
     font-weight: 500;
+}
+
+.simple-title-paragraph.left.block h2,
+.simple-title-paragraph.left.block p {
+    text-align: left;
 }
 
 .simple-title-paragraph.block h2#programas,

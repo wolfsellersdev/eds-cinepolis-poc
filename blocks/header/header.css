@@ -62,13 +62,6 @@ header.header-wrapper .header.block {
     left: 0;
 }
 
-.section:nth-child(1) .default-content-wrapper > ul >li:nth-child(2) {
-    background: var(--color-secondary);
-    border-radius: var(--radiusitems);
-    padding: 12px 15px;
-    max-width: 120px;
-}
-
 #nav .section ul >li:nth-child(2) >ul >li {
     position: relative;   
 }
@@ -99,6 +92,20 @@ header.header-wrapper .header.block {
     min-height: 242px;
     max-width: 208px;
     position: static;
+}
+
+.default-content-wrapper >ul > li {
+    padding: 12px 15px;
+}
+
+.default-content-wrapper >ul > li a {
+    text-decoration: none;
+}
+
+.default-content-wrapper >ul > li:hover {
+    background: var(--color-secondary);
+    border-radius: var(--radiusitems);
+
 }
 
 /* background: pink; */

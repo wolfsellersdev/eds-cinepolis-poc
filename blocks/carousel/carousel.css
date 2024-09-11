@@ -1,1 +1,9 @@
 /* stylelint-disable no-empty-source */
+
+.section.carousel-container {
+    margin: 0 auto 120px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid cadetblue;
+    flex-direction: column;
+}
