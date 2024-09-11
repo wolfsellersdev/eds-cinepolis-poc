@@ -1,7 +1,7 @@
 /* stylelint-disable no-empty-source */
 
 main > .section.media-side-text-basic-container {
-    margin: 0;
+    margin: 80px 0 0 0;
 }
 
 .media-side-text-basic.block {

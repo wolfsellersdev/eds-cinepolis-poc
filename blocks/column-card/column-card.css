@@ -1,1 +1,108 @@
 /* stylelint-disable no-empty-source */
+
+
+main > .section.column-card-container {
+    margin: 80px auto;
+    border: 2px solid blueviolet;
+}
+
+.column-card.block {
+    margin: 0 auto;
+    max-width: var(--layout-content);
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+}
+
+.column-card.block h3 {
+    font-size: var(--body-font-p-24);
+    margin: 19px 0 47px;
+    line-height: 28.8px;
+    position: relative;
+    font-weight: 700;
+}
+
+.column-card.block h3::after {
+    content: '';
+    display: block;
+    border: 1px solid var(--color-black);
+    width: 40px;
+    position: absolute;
+    bottom: -24px;
+    left: 0;
+}
+
+.column-card.block p {
+    font-weight: 400;
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+}
+
+.column-card.block .button-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.column-card.block .button-container .button {
+    background: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    column-gap: 15px;
+    color: var(--color-link-15);
+    font-size: var(--body-font-p-16);
+    line-height: 19.2px;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+.column-card.block .button-container .button::after {
+    content: '+';
+    width: 24px;
+    height: 24px;
+    color: var(--color-white);
+    font-size: var(--body-font-p-16);
+    border-radius: var(--radiusitems);
+    background: var(--color-link-15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--head-font-32);
+    line-height: var(--head-font-32);
+    font-weight: 400;
+}
+
+.column-card.block > div {
+    display: flex;
+    column-gap: 26px;
+    min-height: 376px;
+}
+
+.column-card.block > div div  {
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.column-card.block > div:nth-child(2n + 2) div:not(:first-child),
+.column-card.block > div:nth-child(2n + 1) div:nth-child(2n + 1) {
+    border: 1px solid var(--color-grayec);
+    border-radius: var(--radiuspopup);
+    padding: 25px;
+}
+
+.column-card.block > div:nth-child(2n + 2) div:first-child picture,
+.column-card.block > div:nth-child(2n + 1) div:last-child picture {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.column-card.block > div:nth-child(2n + 2) div:first-child picture img,
+.column-card.block > div:nth-child(2n + 1) div:last-child picture img {
+    border-radius: var(--radiuspopup);
+    object-fit: cover;
+}

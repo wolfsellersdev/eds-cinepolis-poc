@@ -76,6 +76,10 @@ main .section div.hero-banner-wrapper {
 }
 
 @media (width >= 1025px) {
+    main .section.hero-banner-container {
+        margin-bottom: 120px;
+    }
+
     .hero-banner.block > div::after {
         background: var(--bkg-gradient-herobanner);
         left: 0;
