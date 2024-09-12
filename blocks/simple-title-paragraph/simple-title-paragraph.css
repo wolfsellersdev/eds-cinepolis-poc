@@ -2,7 +2,7 @@
 
 
 main > .section.simple-title-paragraph-container {
-    margin: 120px auto 80px;
+    margin: 80px auto 0;
 }
 
 .simple-title-paragraph-container .simple-title-paragraph-wrapper {
@@ -28,6 +28,11 @@ main > .section.simple-title-paragraph-container {
     font-weight: 500;
 }
 
+.simple-title-paragraph.left.block h2,
+.simple-title-paragraph.left.block p {
+    text-align: left;
+}
+
 .simple-title-paragraph.block h2#programas,
 .simple-title-paragraph.block h2#programas + p {
     width: 100%;
@@ -36,7 +41,7 @@ main > .section.simple-title-paragraph-container {
 
 @media (width <= 1024px) {
     main > .section.simple-title-paragraph-container {
-        margin: 65px auto;
+        margin: 65px auto 0;
     }
 
     .simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.block div div {

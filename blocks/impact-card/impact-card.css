@@ -24,13 +24,11 @@ main > .section.impact-card-container {
 .impact-card.block > div div {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .impact-card.block > div h2 {
     font-size: var(--head-font-40);
     line-height: var(--head-font-40);
-    text-align: center;
     font-weight: 800;
     margin: 0 0 40px;
 }
@@ -39,7 +37,7 @@ main > .section.impact-card-container {
     font-size: var(--body-font-p-20);
     line-height: 24px;
     font-weight: 700;
-    margin: 0 0 17px;
+    margin: 0 0 14px;
 }
 
 .impact-card.block > div:first-child >div h2 {
@@ -95,4 +93,26 @@ main > .section.impact-card-container {
 .impact-card.block >div:not(:first-child) div:last-child {
     margin-top: auto;
     font-weight: 500;
+}
+
+@media (width <= 1024px) {
+    main > .section.impact-card-container {
+        margin: 65px 0;
+    }
+
+    .impact-card.block {
+        margin: 118px auto 0;
+        grid-template-columns: 1fr;
+        column-gap: 40px;
+    }
+
+    .impact-card.block > div:first-child >div h2 {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+        margin: 0;
+    }
+
+    .impact-card.block >div:nth-child(1) {
+        top: -55px;
+    }
 }

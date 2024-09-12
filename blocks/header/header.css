@@ -46,6 +46,10 @@ header.header-wrapper .header.block {
     margin: 0;
 }
 
+.default-content-wrapper >ul > li a {
+    text-decoration: none;
+}
+
 #nav .section ul li a {
     color: var(--color-white);
     font-size: var(--body-font-p-16);
@@ -62,11 +66,13 @@ header.header-wrapper .header.block {
     left: 0;
 }
 
-.section:nth-child(1) .default-content-wrapper > ul >li:nth-child(2) {
+.default-content-wrapper >ul > li {
+    padding: 12px 15px;
+}
+
+header .default-content-wrapper >ul > li:hover {
     background: var(--color-secondary);
     border-radius: var(--radiusitems);
-    padding: 12px 15px;
-    max-width: 120px;
 }
 
 #nav .section ul >li:nth-child(2) >ul >li {

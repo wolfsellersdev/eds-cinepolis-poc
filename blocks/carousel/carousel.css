@@ -1,1 +1,45 @@
 /* stylelint-disable no-empty-source */
+
+.section.carousel-container {
+    margin: 0 auto 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section.carousel-container .default-content-wrapper h2 {
+    font-size: var(--head-font-40);
+    line-height: var(--head-font-40);
+    margin: 0 0 32px;
+    font-weight: 800;
+}
+
+main > .section.carousel-container .carousel-wrapper {
+    max-width: var(--layout-cinepolis);
+}
+
+.carousel.links.block,
+.carousel.gallery.block {
+    display: flex;
+    column-gap: 25px;
+}
+
+.carousel.gallery.block div p picture {
+    display: block;
+}
+
+.carousel.gallery.block div p {
+    font-size: var(--body-font-p-13);
+    line-height: 15.85px;
+    font-weight: 400;
+}
+
+@media (width <= 768px) {
+    .carousel.links.block {
+        flex-direction: column;
+    }
+
+    .carousel.links.block > div:not(:first-child) {
+        display: none;
+    }
+}

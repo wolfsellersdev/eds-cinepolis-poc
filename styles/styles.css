@@ -37,6 +37,7 @@
   --color-grayec:            #ECEEF1;   
   --color-graya2:            #A2ACBA;  
   --color-link-15:           #15274D;
+  --color-black:             #000;
 
   /* bkg gradients */
   --bkg-gradient-herobanner: linear-gradient(0.25turn, rgba(6 17 43 /100%), rgba(0 0 0 /0%));
@@ -54,6 +55,7 @@
   --radiusitems: 8px;
   --radius-items: 40px;
   --radiuspopup: 24px;
+  --radius-16: 16px;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
