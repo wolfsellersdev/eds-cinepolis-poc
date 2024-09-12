@@ -94,3 +94,25 @@ main > .section.impact-card-container {
     margin-top: auto;
     font-weight: 500;
 }
+
+@media (width <= 1024px) {
+    main > .section.impact-card-container {
+        margin: 65px 0;
+    }
+
+    .impact-card.block {
+        margin: 118px auto 0;
+        grid-template-columns: 1fr;
+        column-gap: 40px;
+    }
+
+    .impact-card.block > div:first-child >div h2 {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+        margin: 0;
+    }
+
+    .impact-card.block >div:nth-child(1) {
+        top: -55px;
+    }
+}
