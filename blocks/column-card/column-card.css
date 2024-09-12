@@ -3,7 +3,6 @@
 
 main > .section.column-card-container {
     margin: 80px auto;
-    border: 2px solid blueviolet;
 }
 
 .column-card.block {

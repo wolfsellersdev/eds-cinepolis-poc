@@ -70,7 +70,7 @@ header.header-wrapper .header.block {
     padding: 12px 15px;
 }
 
-.default-content-wrapper >ul > li:hover {
+header .default-content-wrapper >ul > li:hover {
     background: var(--color-secondary);
     border-radius: var(--radiusitems);
 }
