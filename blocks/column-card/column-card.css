@@ -104,3 +104,40 @@ main > .section.column-card-container {
     border-radius: var(--radiuspopup);
     object-fit: cover;
 }
+
+@media (width <= 1024px) {
+    main > .section.column-card-container {
+        margin: 22px auto 65px;
+    }
+
+    .column-card.block {
+        row-gap: 25px;
+    }
+
+    .column-card.block h3 {
+        font-size: var(--body-font-p-20);
+        margin: 25px 0 46px;
+        line-height: 24px;
+    }
+
+    .column-card.block p {
+        font-size: var(--body-font-p-16);
+        line-height: 20px;
+    }
+
+    .column-card.block .button-container {
+        margin-top: 25px;
+    }
+
+    .column-card.block > div {
+        flex-direction: column;
+    }
+
+    .column-card.block > div div {
+        width: 100%;
+    }
+
+    .column-card.block > div:nth-child(2n + 1) {
+        flex-direction: column-reverse;
+    }
+}

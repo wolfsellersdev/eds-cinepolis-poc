@@ -18,6 +18,13 @@ main .section.media-container {
     font-weight: 600;
 }
 
+.media.block picture img,
 .media.rounded.block picture img {
     border-radius: var(--radius-items);
+}
+
+@media (width <= 1024px) {
+    .media.rounded.block {
+        margin: 0 auto 65px;
+    }
 }

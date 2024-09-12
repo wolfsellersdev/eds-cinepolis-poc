@@ -123,3 +123,10 @@ main .section div.hero-banner-wrapper {
         font-weight: 500;
     }
 }
+
+@media (width <= 375px) {
+    .hero-banner.block > div div h2 {
+        font-size: 50px;
+        list-style: none;
+    }
+}
