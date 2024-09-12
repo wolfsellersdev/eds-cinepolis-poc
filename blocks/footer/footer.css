@@ -250,3 +250,10 @@
         margin: 48px 0 50px;
     }
 }
+
+
+@media (width <= 390px) {
+    .footer.block .section.logosleft-container .logosrigth-wrapper span.icon:last-child img {
+        width: 279px;
+    }
+}
