@@ -131,6 +131,7 @@ main > .section.column-card-container {
 
     .column-card.block > div {
         flex-direction: column;
+        row-gap: 25px;
     }
 
     .column-card.block > div div {

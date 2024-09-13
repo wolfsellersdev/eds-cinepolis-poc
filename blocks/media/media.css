@@ -5,10 +5,19 @@ main .section.media-container {
     margin: 0;
 }
 
+main .section.media-container .media-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .media.rounded.block {
     margin: 0 auto 78px;
     display: flex;
     max-width: var(--layout-content);
+}
+
+.media.rounded.margin-top {
+    margin-top: 80px; 
 }
 
 .media.rounded.block p:last-child {
@@ -23,8 +32,22 @@ main .section.media-container {
     border-radius: var(--radius-items);
 }
 
+/* media only logo */
+.media.logo.block {
+    margin: 120px auto 0;
+}
+
 @media (width <= 1024px) {
     .media.rounded.block {
         margin: 0 auto 65px;
     }
+
+    .media.rounded.margin-top {
+        margin-top: 65px; 
+    }
+
+    .media.logo.block {
+        margin: 74px auto 0;
+    }
+
 }

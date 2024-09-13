@@ -1,1 +1,55 @@
 /* stylelint-disable no-empty-source */
+
+main > .section.card-container {
+    max-width: var(--layout-content);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section .card-wrapper {
+    padding: 0;
+}
+
+.section.card-container .card.block {
+    background: var(--color-backg-blue-light);
+    border-radius: var(--radius-items);
+    padding: 80px;
+}
+
+.section.card-container .card.block h3 {
+    font-weight: 800;
+    margin: 0 0 25px;
+    font-size: var(--heading-font-size-xl);
+    line-height: var(--heading-font-size-xl);
+}
+
+.section.card-container .card.block p {
+    font-weight: 500;
+    font-size: var(--body-font-p-20);
+    line-height: 25px;
+}
+
+@media (width <= 1024px) {
+    .section.card-container .card.block {
+        padding: 25px 20px;
+        margin: 0 25px;
+    }
+
+    .section.card-container .card.block h3 {
+        margin: 0 0 15px;
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+    }
+    
+    .section.card-container .card.block p {
+        font-size: var(--body-font-p-18);
+        line-height: 22.5px;
+    }
+
+    .section.card-container .card.not-rounder-border.block {
+        border-radius: inherit;
+        margin: 0;
+    }
+}

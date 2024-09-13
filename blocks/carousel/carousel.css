@@ -1,7 +1,7 @@
 /* stylelint-disable no-empty-source */
 
 .section.carousel-container {
-    margin: 0 auto 120px;
+    margin: 0 auto 80px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -14,8 +14,102 @@
     font-weight: 800;
 }
 
-main > .section.carousel-container .carousel-wrapper {
+.section.carousel-container .default-content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main > .section.carousel-container .carousel-wrapper,
+main > .section.carousel-container .default-content-wrapper {
     max-width: var(--layout-cinepolis);
+    box-sizing: border-box;
+    margin: 0 auto; 
+}
+
+main > .section.carousel-container .carousel-wrapper {
+    padding: 0 0 0 82px;
+    overflow: hidden;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block {
+    display: flex;
+    column-gap: 25px;
+    overflow: scroll;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div {
+    padding: 0 25px 40px;
+}
+
+.carousel.gallery.block div p {
+    font-size: var(--body-font-p-13);
+    line-height: 15.85px;
+    font-weight: 400;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:first-child {
+    font-size: var(--body-font-p-24);
+    margin-bottom: 15px;
+    line-height: 28.8px;
+    font-weight: 700;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:nth-child(2) {
+    font-size: var(--body-font-p-16);
+    line-height: 19.2px;
+    margin-bottom: 9px;
+    font-weight: 600;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:nth-child(3) {
+    font-size: var(--body-font-p-12);
+    text-transform: uppercase;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.section.carousel-container .default-content-wrapper:last-child {
+    border: 1px solid red;
+    max-width: var(--layout-cinepolis);
+    margin: 25px auto 0; 
+    width: 100%;
+}
+
+.section.carousel-container .default-content-wrapper h3 {
+    font-size: 0;
+    background: var(--color-primary);
+    border-radius: 0 var(--radiusitems) var(--radiusitems) 0;
+    position: relative;
+    height: 64px;
+    width: 79px;
+}
+
+.section.carousel-container .default-content-wrapper h3::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 4px);
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    border-left: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+    transform: rotate(225deg); 
+    transition: all 0.25s ease;
+    right: 34px;
+    z-index: 1;
+}
+
+.section.carousel-container .default-content-wrapper h3::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);
+    height: 15px;
+    border-radius: 2px;
+    border-left: 2px solid var(--color-white);
+    transform: rotate(90deg); 
+    transition: all 0.25s ease;
+    right: 41px;
+    z-index: 1;
 }
 
 .carousel.links.block,
@@ -28,18 +122,71 @@ main > .section.carousel-container .carousel-wrapper {
     display: block;
 }
 
-.carousel.gallery.block div p {
-    font-size: var(--body-font-p-13);
-    line-height: 15.85px;
-    font-weight: 400;
+@media (width >= 1440px) {
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div {
+        max-width: 586px;
+        min-width: 586px;
+    }
 }
 
 @media (width <= 768px) {
+    main > .section.carousel-container .carousel-wrapper {
+        max-width: 390px;
+    }
+
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block {
+        column-gap: 20px;
+    }
+
+    .section.carousel-container .default-content-wrapper h2 {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+        margin-bottom: 20px;
+        padding: 0 25px;
+    }
+    
+    .carousel.gallery.block > div:not(:first-child),
+    .carousel.links.block > div:not(:first-child) {
+        display: none;
+    }
+
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div >div {
+        padding: 0 20px 22px;
+        max-width: 320px;
+        width: 320px;
+    }
+    
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:first-child {
+        font-size: var(--body-font-p-16);
+        margin-bottom: 9px;
+        line-height: 19.2px;
+    }
+
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:nth-child(2) {
+        font-size: var(--body-font-p-14);
+        line-height: 17.5px;
+    }
+    
+    main > .section.carousel-container .carousel-wrapper,
+    main > .section.carousel-container .default-content-wrapper {
+        padding: 0;
+    }
+
     .carousel.links.block {
         flex-direction: column;
     }
 
-    .carousel.links.block > div:not(:first-child) {
-        display: none;
+    .carousel.gallery.block {
+        flex-direction: column;
+    }
+}
+
+@media (width <= 389px) {
+    main > .section.carousel-container .carousel-wrapper {
+        max-width: 318px;
+    }
+
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div >div {
+        width: 100%;
     }
 }
