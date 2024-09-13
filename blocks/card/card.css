@@ -56,6 +56,7 @@ main > .section.card-container {
         border-radius: inherit;
         margin: 0;
     }
+    
     .section.card-container .card.fundation.block {
         margin: 0 0 66px;
     }

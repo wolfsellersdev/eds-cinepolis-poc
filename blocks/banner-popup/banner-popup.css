@@ -29,6 +29,11 @@ main > .section.banner-popup-container {
     font-weight: 500;
 }
 
+.banner-popup.block h3,
+.banner-popup.block p {
+    color: var(--color-white);
+}
+
 .banner-popup.block >div div:last-child p:last-child {
     max-width: 257px;
     margin-top: 20px;
@@ -48,11 +53,6 @@ main > .section.banner-popup-container {
     min-height: 440px;
     max-width: 448px;
     height: 100%;
-}
-
-.banner-popup.block h3,
-.banner-popup.block p {
-    color: var(--color-white);
 }
 
 .banner-popup.block h3 {
