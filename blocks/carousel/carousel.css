@@ -1,7 +1,7 @@
 /* stylelint-disable no-empty-source */
 
 .section.carousel-container {
-    margin: 0 auto 120px;
+    margin: 0 auto 80px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -23,8 +23,43 @@ main > .section.carousel-container .carousel-wrapper,
 main > .section.carousel-container .default-content-wrapper {
     max-width: var(--layout-cinepolis);
     box-sizing: border-box;
-    padding: 0 0 0 82px;
     margin: 0 auto; 
+}
+
+main > .section.carousel-container .carousel-wrapper {
+    padding: 0 0 0 82px;
+    overflow: hidden;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block {
+    display: flex;
+    column-gap: 25px;
+    overflow: scroll;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div {
+    padding: 0 25px 40px 25px;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:first-child {
+    font-size: var(--body-font-p-24);
+    margin-bottom: 15px;
+    line-height: 28.8px;
+    font-weight: 700;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:nth-child(2) {
+    font-size: var(--body-font-p-16);
+    line-height: 19.2px;
+    margin-bottom: 9px;
+    font-weight: 600;
+}
+
+main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:nth-child(3) {
+    font-size: var(--body-font-p-12);
+    text-transform: uppercase;
+    line-height: 12px;
+    font-weight: 400;
 }
 
 .section.carousel-container .default-content-wrapper:last-child {
@@ -87,7 +122,51 @@ main > .section.carousel-container .default-content-wrapper {
     font-weight: 400;
 }
 
+@media (width >= 1440px) {
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div {
+        max-width: 586px;
+        min-width: 586px;
+        background: yellow;
+    }
+}
+
 @media (width <= 768px) {
+    main > .section.carousel-container .carousel-wrapper {
+        max-width: 390px;
+    }
+
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block {
+        column-gap: 20px;
+    }
+
+    .section.carousel-container .default-content-wrapper h2 {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+        margin-bottom: 20px;
+        padding: 0 25px;
+    }
+    
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div >div {
+        padding: 0 20px 22px;
+        max-width: 320px;
+        width: 320px;
+    }
+    
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:first-child {
+        font-size: var(--body-font-p-16);
+        margin-bottom: 9px;
+        line-height: 19.2px;
+    }
+
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:nth-child(2) {
+        font-size: var(--body-font-p-14);
+        line-height: 17.5px;
+    }
+    
+    main > .section.carousel-container .carousel-wrapper,
+    main > .section.carousel-container .default-content-wrapper {
+        padding: 0;
+    }
     .carousel.links.block {
         flex-direction: column;
     }
@@ -99,5 +178,15 @@ main > .section.carousel-container .default-content-wrapper {
 
     .carousel.gallery.block {
         flex-direction: column;
+    }
+}
+
+@media (width <= 389px) {
+    main > .section.carousel-container .carousel-wrapper {
+        max-width: 318px;
+    }
+
+    main > .section.carousel-container .carousel-wrapper .carousel.text.block >div >div {
+        width: 100%;
     }
 }

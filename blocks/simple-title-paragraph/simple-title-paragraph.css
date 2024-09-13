@@ -47,18 +47,14 @@ main > .section.simple-title-paragraph-container {
     font-size: var(--body-font-p-16);
 }
 
-.simple-title-paragraph.program-paragraph.block p:last-child {
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
 .simple-title-paragraph.left.block h2,
 .simple-title-paragraph.left.block p {
     text-align: left;
 }
 
 .simple-title-paragraph.program-paragraph.block p:last-child {
-    background: transparent;
+    font-weight: 500;
+    margin-bottom: 0;
 }
 
 .simple-title-paragraph.block h2#programas,
