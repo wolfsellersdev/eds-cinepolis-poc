@@ -14,8 +14,61 @@
     font-weight: 800;
 }
 
-main > .section.carousel-container .carousel-wrapper {
+main > .section.carousel-container .carousel-wrapper,
+main > .section.carousel-container .default-content-wrapper {
     max-width: var(--layout-cinepolis);
+    box-sizing: border-box;
+    padding: 0 0 0 82px;
+    margin: 0 auto; 
+}
+
+.section.carousel-container .default-content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.section.carousel-container .default-content-wrapper:last-child {
+    border: 1px solid red;
+    max-width: var(--layout-cinepolis);
+    margin: 25px auto 0; 
+    width: 100%;
+}
+
+.section.carousel-container .default-content-wrapper h3 {
+    font-size: 0;
+    background: var(--color-primary);
+    border-radius: 0 var(--radiusitems) var(--radiusitems) 0;
+    position: relative;
+    height: 64px;
+    width: 79px;
+}
+
+.section.carousel-container .default-content-wrapper h3::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 4px);
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    border-left: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+    transform: rotate(225deg); 
+    transition: all 0.25s ease;
+    right: 34px;
+    z-index: 1;
+}
+
+.section.carousel-container .default-content-wrapper h3::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 6px);
+    height: 15px;
+    border-radius: 2px;
+    border-left: 2px solid var(--color-white);
+    transform: rotate(90deg); 
+    transition: all 0.25s ease;
+    right: 41px;
+    z-index: 1;
 }
 
 .carousel.links.block,
@@ -39,7 +92,13 @@ main > .section.carousel-container .carousel-wrapper {
         flex-direction: column;
     }
 
+    .carousel.gallery.block > div:not(:first-child),
     .carousel.links.block > div:not(:first-child) {
         display: none;
+    }
+
+    .carousel.gallery.block {
+        background-color: pink;
+        flex-direction: column;
     }
 }

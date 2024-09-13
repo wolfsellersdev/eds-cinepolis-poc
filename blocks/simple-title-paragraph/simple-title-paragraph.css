@@ -16,6 +16,31 @@ main > .section.simple-title-paragraph-container {
     text-align: center;
 }
 
+.simple-title-paragraph.program-paragraph.block {
+    margin-bottom: 80px;
+}
+
+.simple-title-paragraph.program-paragraph.block h2 {
+    width: 100%;
+    text-align: left;
+    background: red;
+    margin-bottom: 38px;
+}
+
+.simple-title-paragraph.program-paragraph.block p {
+    width: 100%;
+    text-align: left;
+    font-weight: 400;
+    line-height: 22.5px;
+    margin-bottom: 15px;
+    font-size: var(--body-font-p-16);
+}
+
+.simple-title-paragraph.program-paragraph.block p:last-child {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
 .simple-title-paragraph-container h2 {
     margin: 0 0 19px;
     font-size: var(--heading-font-size-xl);
@@ -58,5 +83,15 @@ main > .section.simple-title-paragraph-container {
     .simple-title-paragraph.block p {
         font-size: var(--body-font-p-18);
         line-height: 22.5px;
+    }
+
+    .simple-title-paragraph.program-paragraph.block {
+        margin-bottom: 65px;
+    }
+
+    .simple-title-paragraph.program-paragraph.block p:nth-child(2),
+    .simple-title-paragraph.program-paragraph.block p:last-child {
+        font-weight: 500;
+        font-size: var(--body-font-p-18);
     }
 }

@@ -2,6 +2,7 @@
 
 header.header-wrapper {
     position: relative;
+    height: 92px;
 }
 
 header.header-wrapper .header.block {
@@ -148,6 +149,10 @@ header .default-content-wrapper >ul > li:hover {
 }
 
 @media (width <= 960px) {
+    header.header-wrapper {
+        height: 72px;
+    }
+
     #nav >.section:first-child .default-content-wrapper >ul {
         flex-direction: column;
     }
