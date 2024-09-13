@@ -38,7 +38,13 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block {
 }
 
 main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div {
-    padding: 0 25px 40px 25px;
+    padding: 0 25px 40px;
+}
+
+.carousel.gallery.block div p {
+    font-size: var(--body-font-p-13);
+    line-height: 15.85px;
+    font-weight: 400;
 }
 
 main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:first-child {
@@ -116,17 +122,10 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     display: block;
 }
 
-.carousel.gallery.block div p {
-    font-size: var(--body-font-p-13);
-    line-height: 15.85px;
-    font-weight: 400;
-}
-
 @media (width >= 1440px) {
     main > .section.carousel-container .carousel-wrapper .carousel.text.block >div {
         max-width: 586px;
         min-width: 586px;
-        background: yellow;
     }
 }
 
@@ -146,6 +145,11 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
         padding: 0 25px;
     }
     
+    .carousel.gallery.block > div:not(:first-child),
+    .carousel.links.block > div:not(:first-child) {
+        display: none;
+    }
+
     main > .section.carousel-container .carousel-wrapper .carousel.text.block >div >div {
         padding: 0 20px 22px;
         max-width: 320px;
@@ -167,13 +171,9 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     main > .section.carousel-container .default-content-wrapper {
         padding: 0;
     }
+
     .carousel.links.block {
         flex-direction: column;
-    }
-
-    .carousel.gallery.block > div:not(:first-child),
-    .carousel.links.block > div:not(:first-child) {
-        display: none;
     }
 
     .carousel.gallery.block {
