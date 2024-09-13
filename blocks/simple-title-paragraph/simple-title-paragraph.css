@@ -20,11 +20,22 @@ main > .section.simple-title-paragraph-container {
     margin-bottom: 80px;
 }
 
+.simple-title-paragraph-container h2 {
+    margin: 0 0 19px;
+    font-size: var(--heading-font-size-xl);
+    line-height: 40px;
+    font-weight: 800;
+}
+
 .simple-title-paragraph.program-paragraph.block h2 {
     width: 100%;
     text-align: left;
-    background: red;
     margin-bottom: 38px;
+}
+
+.simple-title-paragraph-container p {
+    line-height: 25px;
+    font-weight: 500;
 }
 
 .simple-title-paragraph.program-paragraph.block p {
@@ -39,18 +50,6 @@ main > .section.simple-title-paragraph-container {
 .simple-title-paragraph.program-paragraph.block p:last-child {
     font-weight: 500;
     margin-bottom: 0;
-}
-
-.simple-title-paragraph-container h2 {
-    margin: 0 0 19px;
-    font-size: var(--heading-font-size-xl);
-    line-height: 40px;
-    font-weight: 800;
-}
-
-.simple-title-paragraph-container p {
-    line-height: 25px;
-    font-weight: 500;
 }
 
 .simple-title-paragraph.left.block h2,

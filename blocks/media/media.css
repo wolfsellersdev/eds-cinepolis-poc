@@ -3,7 +3,6 @@
 
 main .section.media-container {
     margin: 0;
-    background: orange;
 }
 
 main .section.media-container .media-wrapper {
@@ -35,7 +34,6 @@ main .section.media-container .media-wrapper {
 
 /* media only logo */
 .media.logo.block {
-    border: 2px solid greenyellow;
     margin: 120px auto 0;
 }
 

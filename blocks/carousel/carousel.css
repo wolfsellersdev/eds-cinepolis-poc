@@ -14,17 +14,17 @@
     font-weight: 800;
 }
 
+.section.carousel-container .default-content-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
 main > .section.carousel-container .carousel-wrapper,
 main > .section.carousel-container .default-content-wrapper {
     max-width: var(--layout-cinepolis);
     box-sizing: border-box;
     padding: 0 0 0 82px;
     margin: 0 auto; 
-}
-
-.section.carousel-container .default-content-wrapper {
-    display: flex;
-    justify-content: flex-end;
 }
 
 .section.carousel-container .default-content-wrapper:last-child {
@@ -98,7 +98,6 @@ main > .section.carousel-container .default-content-wrapper {
     }
 
     .carousel.gallery.block {
-        background-color: pink;
         flex-direction: column;
     }
 }
