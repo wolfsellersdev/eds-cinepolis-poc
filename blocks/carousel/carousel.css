@@ -76,6 +76,16 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     width: 100%;
 }
 
+
+.section.carousel-container .default-content-wrapper:last-child::after {
+    content: '';
+    border-right: 1px solid var(--color-gray45);
+    position: relative;
+    right: 82px;
+    height: 40px;
+    top: 11px;
+}
+
 .section.carousel-container .default-content-wrapper h3 {
     font-size: 0;
     background: var(--color-primary);
@@ -83,6 +93,21 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     position: relative;
     height: 64px;
     width: 79px;
+}
+
+.section.carousel-container .default-content-wrapper h3:first-child {
+    border-radius: var(--radiusitems) 0  0 var(--radiusitems);
+}
+
+.section.carousel-container .default-content-wrapper h3:first-child::before {
+    right: 39px;
+    transform: rotate(40deg); 
+    border-left: 2px solid var(--color-gray45);
+    border-bottom: 2px solid var(--color-gray45);
+}
+
+.section.carousel-container .default-content-wrapper h3:first-child::after {
+    border-left: 2px solid var(--color-gray45);
 }
 
 .section.carousel-container .default-content-wrapper h3::before {
