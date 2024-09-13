@@ -99,17 +99,6 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     border-radius: var(--radiusitems) 0  0 var(--radiusitems);
 }
 
-.section.carousel-container .default-content-wrapper h3:first-child::before {
-    right: 39px;
-    transform: rotate(40deg); 
-    border-left: 2px solid var(--color-gray45);
-    border-bottom: 2px solid var(--color-gray45);
-}
-
-.section.carousel-container .default-content-wrapper h3:first-child::after {
-    border-left: 2px solid var(--color-gray45);
-}
-
 .section.carousel-container .default-content-wrapper h3::before {
     content: '';
     position: absolute;
@@ -125,6 +114,13 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     z-index: 1;
 }
 
+.section.carousel-container .default-content-wrapper h3:first-child::before {
+    right: 39px;
+    transform: rotate(40deg); 
+    border-left: 2px solid var(--color-gray45);
+    border-bottom: 2px solid var(--color-gray45);
+}
+
 .section.carousel-container .default-content-wrapper h3::after {
     content: '';
     position: absolute;
@@ -136,6 +132,10 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     transition: all 0.25s ease;
     right: 41px;
     z-index: 1;
+}
+
+.section.carousel-container .default-content-wrapper h3:first-child::after {
+    border-left: 2px solid var(--color-gray45);
 }
 
 .carousel.links.block,

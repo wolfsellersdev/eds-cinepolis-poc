@@ -36,6 +36,7 @@ main > .section.two-columns-text-container  .two-columns-text-wrapper {
     main > .section.two-columns-text-container {
         margin: 0 auto 61px;
     }
+    
     .two-columns-text.block {
         flex-direction: column;
         padding: 0 25px;

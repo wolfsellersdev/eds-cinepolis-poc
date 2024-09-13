@@ -21,8 +21,7 @@ main > .section.our-team-container .our-team-wrapper {
 
 .section.our-team-container .our-team.block >div:first-child {
     display: grid;
-    grid-column-end: 4;
-    grid-column-start: 1;
+    grid-column: 4 / 1;
     justify-content: center;
 }
 
