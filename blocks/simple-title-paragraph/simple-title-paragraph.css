@@ -57,6 +57,10 @@ main > .section.simple-title-paragraph-container {
     text-align: left;
 }
 
+.simple-title-paragraph.program-paragraph.block p:last-child {
+    background: transparent;
+}
+
 .simple-title-paragraph.block h2#programas,
 .simple-title-paragraph.block h2#programas + p {
     width: 100%;
