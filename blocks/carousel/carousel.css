@@ -35,6 +35,7 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block {
     display: flex;
     column-gap: 25px;
     overflow: scroll;
+    scrollbar-width: none;
 }
 
 main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div {
@@ -75,6 +76,16 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     width: 100%;
 }
 
+
+.section.carousel-container .default-content-wrapper:last-child::after {
+    content: '';
+    border-right: 1px solid var(--color-gray45);
+    position: relative;
+    right: 82px;
+    height: 40px;
+    top: 11px;
+}
+
 .section.carousel-container .default-content-wrapper h3 {
     font-size: 0;
     background: var(--color-primary);
@@ -82,6 +93,10 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     position: relative;
     height: 64px;
     width: 79px;
+}
+
+.section.carousel-container .default-content-wrapper h3:first-child {
+    border-radius: var(--radiusitems) 0  0 var(--radiusitems);
 }
 
 .section.carousel-container .default-content-wrapper h3::before {
@@ -99,6 +114,13 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     z-index: 1;
 }
 
+.section.carousel-container .default-content-wrapper h3:first-child::before {
+    right: 39px;
+    transform: rotate(40deg); 
+    border-left: 2px solid var(--color-gray45);
+    border-bottom: 2px solid var(--color-gray45);
+}
+
 .section.carousel-container .default-content-wrapper h3::after {
     content: '';
     position: absolute;
@@ -110,6 +132,10 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     transition: all 0.25s ease;
     right: 41px;
     z-index: 1;
+}
+
+.section.carousel-container .default-content-wrapper h3:first-child::after {
+    border-left: 2px solid var(--color-gray45);
 }
 
 .carousel.links.block,
@@ -153,7 +179,7 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     main > .section.carousel-container .carousel-wrapper .carousel.text.block >div >div {
         padding: 0 20px 22px;
         max-width: 320px;
-        width: 320px;
+        width: 283px;
     }
     
     main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:first-child {

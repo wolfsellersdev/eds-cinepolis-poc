@@ -65,7 +65,7 @@ main > .section.simple-title-paragraph-container {
 
 @media (width <= 1024px) {
     main > .section.simple-title-paragraph-container {
-        margin: 65px auto 0;
+        margin: 0 auto;
     }
 
     .simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.block div div {
