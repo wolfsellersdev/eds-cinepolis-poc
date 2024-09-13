@@ -35,6 +35,7 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block {
     display: flex;
     column-gap: 25px;
     overflow: scroll;
+    scrollbar-width: none;
 }
 
 main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div {
@@ -153,7 +154,7 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     main > .section.carousel-container .carousel-wrapper .carousel.text.block >div >div {
         padding: 0 20px 22px;
         max-width: 320px;
-        width: 320px;
+        width: 283px;
     }
     
     main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:first-child {

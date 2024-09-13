@@ -153,6 +153,11 @@ header .default-content-wrapper >ul > li:hover {
         height: 72px;
     }
 
+    #nav >.section:first-child,
+    #nav >.section:nth-child(3) {
+        display: none;
+    }
+
     #nav >.section:first-child .default-content-wrapper >ul {
         flex-direction: column;
     }

@@ -1,1 +1,95 @@
 /* stylelint-disable no-empty-source */
+
+
+main > .section.banner-popup-container {
+    border: 2px solid green;
+    background: var(--color-primary);
+    margin: 0 auto 80px;
+}
+
+.section.banner-popup-container .banner-popup-wrapper {
+    padding: 80px 0;
+}
+
+.banner-popup.block >div {
+    display: flex;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.banner-popup.block >div div:last-child {
+    max-width: 632px;
+}
+
+.banner-popup.block >div div:last-child p:last-child {
+    background: red;
+    max-width: 257px;
+    margin-top: 20px;
+    background: var(--color-secondary);
+    font-size: var(--body-font-p-16);
+    border-radius: var(--radius-16);
+    text-decoration: none;
+    line-height: 19.2px;
+    text-align: center;
+    padding: 20px 8px;
+    font-weight: 700;
+}
+
+.banner-popup.block picture img {
+    border-radius: var(--radius-items);
+    object-fit: cover;
+    min-height: 440px;
+    max-width: 448px;
+    height: 100%;
+}
+
+.banner-popup.block h3,
+.banner-popup.block p {
+    color: var(--color-white);
+}
+
+.banner-popup.block h3 {
+    font-weight: 800;
+    margin: 0 0 20px;
+    font-size: var(--heading-font-size-xl);
+    line-height: var(--heading-font-size-xl);
+}
+
+.banner-popup.block p {
+    display: flex;
+    justify-content: center;
+    font-size: var(--body-font-p-20);
+    line-height: 25px;
+    font-weight: 500;
+}
+
+@media (width <= 1024px) {
+    .section.banner-popup-container .banner-popup-wrapper {
+        padding: 60px 25px;
+    }
+
+    main > .section.banner-popup-container {
+        margin: 0 auto 60px;
+    }
+
+    .banner-popup.block >div {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .banner-popup.block picture img {
+        width: 100%;
+        min-height: 220px;
+    }
+
+    .banner-popup.block h3 {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+    }
+    
+    .banner-popup.block p {
+        font-size: var(--body-font-p-18);
+        line-height: 22.5px;
+        margin: 15px auto 0;
+    }
+}

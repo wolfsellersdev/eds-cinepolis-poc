@@ -1,1 +1,55 @@
 /* stylelint-disable no-empty-source */
+
+main > .section.two-columns-text-container {
+    max-width: var(--layout-content);
+    box-sizing: border-box;
+    margin: 0 auto 78px; 
+}
+
+main > .section.two-columns-text-container  .two-columns-text-wrapper {
+    padding: 0;
+}
+
+.two-columns-text.block {
+    display: flex;
+    column-gap: 38px;
+}
+
+.two-columns-text.block > div {
+    flex: 1;
+}
+
+.two-columns-text.block h3 {
+    font-weight: 800;
+    margin:0 0 15px;
+    font-size: var(--head-font-32);
+    line-height: var(--head-font-32);
+}
+
+.two-columns-text.block p {
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+    font-weight: 400;
+}
+
+@media (width <= 1024px) {
+    main > .section.two-columns-text-container {
+        margin: 0 auto 61px;
+    }
+    .two-columns-text.block {
+        flex-direction: column;
+        padding: 0 25px;
+        row-gap: 38px;
+    }
+    
+    .two-columns-text.block h3 {
+        margin:0 0 17px;
+        font-size: var(--heading-font-size-s);
+        line-height: var(--heading-font-size-s);
+    }
+    
+    .two-columns-text.block p {
+        font-size: var(--body-font-p-16);
+        line-height: 20px;
+    }
+}
