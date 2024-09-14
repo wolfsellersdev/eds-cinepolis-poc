@@ -76,6 +76,10 @@ main > .section.our-team-container .our-team-wrapper {
 }
 
 @media (width <= 1024px) {
+    main > .section.our-team-container {
+        margin: 60px auto;
+    }
+
     .section.our-team-container .our-team.block {
         padding: 0 25px;
         grid-template-columns: 1fr;

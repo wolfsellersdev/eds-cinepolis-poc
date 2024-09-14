@@ -38,8 +38,7 @@ main > .section.brands-container {
 .section.brands-container .brands-wrapper:nth-child(2) .brands.block {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 80px;
-    column-gap: 85px;
+    gap: 80px 85px;
     justify-content: center;
 }
 
@@ -63,6 +62,10 @@ main > .section.brands-container {
 }
 
 @media (width <= 1024px) {
+    main > .section.brands-container {
+        margin: 0 auto 60px;
+    }
+
     .section.brands-container .brands.block h2 {
         font-size: var(--body-font-p-28);
         line-height: var(--body-font-p-28);
@@ -79,11 +82,10 @@ main > .section.brands-container {
     }
 
     .section.brands-container .brands-wrapper:nth-child(2) .brands.block {
-        row-gap: 35px;
         display: flex;
         flex-wrap: wrap;
         padding: 0 25px;
-        column-gap: normal;
+        gap: 35px normal;
         align-items: center;
         justify-content: center;
     }
