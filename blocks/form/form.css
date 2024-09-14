@@ -17,7 +17,7 @@ main > .section.form-container {
     max-width: var(--layout-content-lg);
 }
 
-/* ONLY FORM REGISTRATION*/
+/* ONLY FORM REGISTRATION */
 .section.form-container .form-wrapper .form.registration.block,
 .section.form-container .form-wrapper .form.popup.block {
     grid-column: 2/2;
@@ -27,25 +27,14 @@ main > .section.form-container {
     background: var(--color-white);
 }
 
-.form.popup.block form {
-    flex-direction: column;
-}
-
-.form.popup.block form .field-wrapper,
-.form.popup.block form .field-wrapper input,
-.form.popup.block form .field-wrapper select {
-    background: var(--color-grayec);
-    border: none;
-}
-
-.form.popup.block form .field-wrapper.file-wrapper input {
-    width: 100%;
-}
-
 .form.block form {
     display: flex;
     flex-wrap: wrap;
     gap: 15px 25px;
+}
+
+.form.popup.block form {
+    flex-direction: column;
 }
 
 .form.block form .field-wrapper {
@@ -68,6 +57,18 @@ main > .section.form-container {
     border: none;
     padding: 0;
 }
+
+.form.popup.block form .field-wrapper,
+.form.popup.block form .field-wrapper input,
+.form.popup.block form .field-wrapper select {
+    background: var(--color-grayec);
+    border: none;
+}
+
+.form.popup.block form .field-wrapper.file-wrapper input {
+    width: 100%;
+}
+
 
 .form.block form .field-wrapper input[type="checkbox"] {
     border: 2px solid var(--color-graya2);
@@ -110,11 +111,11 @@ main > .section.form-container {
     grid-template-areas: "firstelement";
 }
 
-.form.block form .field-wrapper.text-wrapper:nth-child(3) label,
 .form.block form .field-wrapper.text-area-wrapper label,
 .form.block form .field-wrapper.checkbox-wrapper label, 
 .form.block form .field-wrapper.checkbox-wrapper input,
-.form.block form .field-wrapper.submit-wrapper label {
+.form.block form .field-wrapper.submit-wrapper label,
+.form.block form .field-wrapper.text-wrapper:nth-child(3) label {
     grid-area: firstelement;
 }
 
