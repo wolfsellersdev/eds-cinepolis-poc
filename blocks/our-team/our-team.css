@@ -44,7 +44,6 @@ main > .section.our-team-container .our-team-wrapper {
     column-gap: 25px;
 }
 
-
 .section.our-team-container .our-team.block >div:not(:first-child) div:last-child {
     border: 1px solid var(--color-grayec);
     border-radius: var(--radiuspopup);
@@ -74,4 +73,80 @@ main > .section.our-team-container .our-team-wrapper {
 .section.our-team-container .our-team.block >div:not(:first-child) img {
     max-width: 254px;
     object-fit: cover;
+}
+
+@media (width <= 1024px) {
+    .section.our-team-container .our-team.block {
+        padding: 0 25px;
+        grid-template-columns: 1fr;
+    }
+
+    .section.our-team-container .our-team.block >div,
+    .section.our-team-container .our-team.block >div:first-child {
+        grid-column: initial;
+        justify-content: center;
+    }
+
+    .section.our-team-container .our-team.block >div:first-child h2 {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+        margin: 0 0 20px;
+    }
+    
+    .section.our-team-container .our-team.block >div:nth-child(2) {
+        margin-right: 0;
+    }
+    
+    .section.our-team-container .our-team.block >div:nth-child(3) {
+        margin-left: 0;
+    }
+
+    .section.our-team-container .our-team.block >div:not(:first-child) {
+        margin-bottom: 25px;
+    }
+
+    .section.our-team-container .our-team.block >div:not(:first-child) div:last-child {
+        min-height: 263px;
+        padding: 24px;
+        flex: 1;
+    }
+
+    .section.our-team-container .our-team.block >div:not(:first-child) div:last-child h2 {
+        font-size: var(--body-font-p-24);
+        line-height: var(--body-font-p-24);
+        font-weight: 600;
+        margin: 0;
+    }
+    
+    .section.our-team-container .our-team.block >div:not(:first-child) div:last-child > p:not(:last-child) {
+        font-size: var(--body-font-p-16);
+        line-height: 20px;
+        font-weight: 400;
+    }
+    
+    .section.our-team-container .our-team.block >div:not(:first-child) div:last-child > p:last-child picture {
+        display: flex;
+    }
+}
+
+@media (width <= 640px) {
+    .section.our-team-container .our-team.block >div:not(:first-child) {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 25px;
+    }
+
+    .section.our-team-container .our-team.block >div:not(:first-child) div:first-child img {
+        max-width: 342px;
+        min-width: 338px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+@media (width <= 389px) {
+    .section.our-team-container .our-team.block >div:not(:first-child) div:first-child img {
+        max-width: auto;
+        min-width: auto;
+    }
 }
