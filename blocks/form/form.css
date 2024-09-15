@@ -53,6 +53,19 @@ main > .section.form-container {
     height: auto;
 }
 
+
+.form.block form .field-wrapper select {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOSA3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNy41MzQ4NCAwLjQwMTEyM0M4LjM2MzA4IDAuNDAxMTIzIDguODMyMyAxLjM1MDMyIDguMzI5MzUgMi4wMDgzN0w1LjQ1MTE2IDUuNzc0MTdDNS4wNTA5MSA2LjI5Nzg1IDQuMjYyMzcgNi4yOTc4NCAzLjg2MjEzIDUuNzc0MTdMMC45ODM5MzIgMi4wMDgzN0MwLjQ4MDk4OCAxLjM1MDMyIDAuOTUwMjA4IDAuNDAxMTIzIDEuNzc4NDUgMC40MDExMjNMNy41MzQ4NCAwLjQwMTEyM1oiIGZpbGw9IiM0NzgxRkYiLz4KPC9zdmc+Cg==');
+    background-position: right 0.7rem top 50%;
+    font-size: var(--body-font-p-16);
+    background-repeat: no-repeat;
+    background-size: auto;
+    line-height: 19.2px;
+    font-weight: 700;
+    padding: 0;
+    border: 0;
+}
+
 .form.block form .field-wrapper input,
 .form.block form .field-wrapper textarea {
     border: none;
@@ -131,7 +144,27 @@ main > .section.form-container {
 
 .form.contact.block form .field-wrapper.text-wrapper:nth-child(3) {
     flex: 1;
-    background: red;
+}
+
+.form.contact.block form .field-wrapper.radio-wrapper input {
+    border: 1px solid var(--color-grayc7);
+}
+
+.form.contact.block form .field-wrapper.radio-wrapper label {
+    font-size: var(--body-font-p-16);
+    line-height: var(--body-font-p-16);
+    font-weight: 600;
+}
+
+.form.contact.block form .field-wrapper.radio-wrapper {
+    flex: none;
+    background: transparent;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    height: max-content;
+    align-items: center;
+    column-gap: 15px;
+    padding: 0;
 }
 
 .form.block form .field-wrapper.submit-wrapper,
@@ -150,6 +183,27 @@ main > .section.form-container {
     height: auto;
 }
 
+/* background: teal; */
+.form.block form .field-wrapper.label {
+    height: max-content;
+    background: transparent;
+    flex: none;
+    padding: 4px 0 0;
+    border: 0;   
+}
+
+.form.block form .field-wrapper.label input {
+    height: 0;
+}
+
+.form.block form .field-wrapper.label label {
+    font-size: var(--body-font-p-14); 
+    line-height: 18.2px;
+    font-weight: 500;
+    padding: 0;
+    border: 0;   
+}
+
 @media (width <= 1024px) {
     main > .section.form-container {
         padding: 0;
@@ -160,7 +214,7 @@ main > .section.form-container {
         padding: 64px 24px;
     }
 
-    /* ONLY FORM REGISTRATION*/
+    /* ONLY FORM REGISTRATION */
     .section.form-container .form-wrapper .form.registration.block,
     .section.form-container .form-wrapper .form.popup.block {
         grid-column: 1/2;
