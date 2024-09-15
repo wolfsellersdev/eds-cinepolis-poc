@@ -66,9 +66,23 @@ main > .section.form-container {
     border: none;
 }
 
+.form.block form .field-wrapper label {
+    font-size: var(--body-font-p-11);
+    line-height: var(--body-font-p-11);
+    font-weight: 500;
+}
+
 .form.block form .field-wrapper.submit-wrapper label {
     grid-area: firstelement;
 }
+
+.form.block form .field-wrapper.text-area-wrapper label,
+.form.block form .field-wrapper.checkbox-wrapper label, 
+.form.block form .field-wrapper.checkbox-wrapper input,
+.form.block form .field-wrapper.text-wrapper:nth-child(3) label {
+    grid-area: firstelement;
+}
+
 .form.popup.block form .field-wrapper.file-wrapper input {
     width: 100%;
 }
@@ -80,12 +94,6 @@ main > .section.form-container {
 
 .form.block form .field-wrapper input[type="checkbox"]:checked {
     background: var(--color-secondary);
-}
-
-.form.block form .field-wrapper label {
-    font-size: var(--body-font-p-11);
-    line-height: var(--body-font-p-11);
-    font-weight: 500;
 }
 
 .form.block form .field-wrapper.submit-wrapper {
@@ -104,11 +112,6 @@ main > .section.form-container {
     font-size: var(--body-font-size-s);
 }
 
-.form.contact.block form .field-wrapper.text-wrapper:nth-child(3) {
-    flex: 1;
-    background: red;
-}
-
 .form.block form .field-wrapper.text-wrapper:nth-child(3),
 .form.block form .field-wrapper.text-area-wrapper,
 .form.block form .field-wrapper.checkbox-wrapper, 
@@ -119,18 +122,16 @@ main > .section.form-container {
     grid-template-areas: "firstelement";
 }
 
+.form.contact.block form .field-wrapper.text-wrapper:nth-child(3) {
+    flex: 1;
+    background: red;
+}
+
 .form.block form .field-wrapper.checkbox-wrapper label {
     padding: 0 0  0 47px;
     font-weight: 500;
     font-size: var(--body-font-p-18);
     line-height: 22.5px;
-}
-
-.form.block form .field-wrapper.text-area-wrapper label,
-.form.block form .field-wrapper.checkbox-wrapper label, 
-.form.block form .field-wrapper.checkbox-wrapper input,
-.form.block form .field-wrapper.text-wrapper:nth-child(3) label {
-    grid-area: firstelement;
 }
 
 .form.block form .field-wrapper.submit-wrapper,
