@@ -76,6 +76,13 @@ main > .section.form-container {
     grid-area: firstelement;
 }
 
+.form.block form .field-wrapper.checkbox-wrapper label {
+    padding: 0 0  0 47px;
+    font-weight: 500;
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+}
+
 .form.block form .field-wrapper.text-area-wrapper label,
 .form.block form .field-wrapper.checkbox-wrapper label, 
 .form.block form .field-wrapper.checkbox-wrapper input,
@@ -125,13 +132,6 @@ main > .section.form-container {
 .form.contact.block form .field-wrapper.text-wrapper:nth-child(3) {
     flex: 1;
     background: red;
-}
-
-.form.block form .field-wrapper.checkbox-wrapper label {
-    padding: 0 0  0 47px;
-    font-weight: 500;
-    font-size: var(--body-font-p-18);
-    line-height: 22.5px;
 }
 
 .form.block form .field-wrapper.submit-wrapper,

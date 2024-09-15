@@ -367,7 +367,7 @@ input[type="email"]:focus-visible {
 input[type="radio"] {
   border: 0.2rem solid var(--color-grayc7);
   transition: all 0.3s ease-in-out;
-  -webkit-appearance: none;
+  appearance: none;
   background: var(--color-white);
   display: inline-block;
   border-radius: 100%;
@@ -448,7 +448,7 @@ select {
   padding-right: 45px;
   outline: 0 !important;
   height: 38px;
-  -webkit-appearance: none;
+  appearance: none;
   background-position: center right;
   background-repeat: no-repeat;
   background-color: var(--color-white);
