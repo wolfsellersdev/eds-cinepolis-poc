@@ -70,7 +70,6 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
 }
 
 .section.carousel-container .default-content-wrapper:last-child {
-    border: 1px solid red;
     max-width: var(--layout-content-lg); 
     margin: 25px auto 0; 
     width: 100%;

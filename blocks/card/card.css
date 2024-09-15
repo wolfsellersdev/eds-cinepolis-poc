@@ -31,7 +31,7 @@ main > .section.card-container {
     line-height: 25px;
 }
 
-.section.card-container .card.fundation.block {
+.section.card-container .card.foundation.block {
     margin: 0 0 80px;
 }
 
@@ -57,7 +57,7 @@ main > .section.card-container {
         margin: 0;
     }
     
-    .section.card-container .card.fundation.block {
+    .section.card-container .card.foundation.block {
         margin: 0 0 66px;
     }
 }
