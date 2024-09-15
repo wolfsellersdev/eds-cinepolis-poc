@@ -96,11 +96,23 @@ main > .section.form-container {
     line-height: 22.5px;
 }
 
+.form.block form .field-wrapper.label label {
+    font-size: var(--body-font-p-14); 
+    line-height: 18.2px;
+    font-weight: 500;
+    padding: 0;
+    border: 0;   
+}
+
 .form.block form .field-wrapper.text-area-wrapper label,
 .form.block form .field-wrapper.checkbox-wrapper label, 
 .form.block form .field-wrapper.checkbox-wrapper input,
 .form.block form .field-wrapper.text-wrapper:nth-child(3) label {
     grid-area: firstelement;
+}
+
+.form.block form .field-wrapper.label input {
+    height: 0;
 }
 
 .form.popup.block form .field-wrapper.file-wrapper input {
@@ -189,18 +201,6 @@ main > .section.form-container {
     background: transparent;
     flex: none;
     padding: 4px 0 0;
-    border: 0;   
-}
-
-.form.block form .field-wrapper.label input {
-    height: 0;
-}
-
-.form.block form .field-wrapper.label label {
-    font-size: var(--body-font-p-14); 
-    line-height: 18.2px;
-    font-weight: 500;
-    padding: 0;
     border: 0;   
 }
 
