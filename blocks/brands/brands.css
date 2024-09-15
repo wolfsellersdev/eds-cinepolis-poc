@@ -1,1 +1,92 @@
-/* stylelint-disable no-empty-source */
+
+main > .section.brands-container {
+    display: flex;
+    margin: 120px auto;
+    flex-direction: column;
+    justify-content: center;
+    max-width: var(--layout-content-lg);  
+}
+
+.section.brands-container .brands.block h2 {
+    font-weight: 800;
+    font-size: var(--head-font-40);
+    text-align: center;
+    margin: 0 0 40px;
+}
+
+.section.brands-container .brands-wrapper:first-child {
+    margin: 0 auto 120px;
+}
+
+.section.brands-container .brands.block > div:first-child {
+    grid-column: 1/4;
+}
+
+.section.brands-container .brands-wrapper:first-child .brands.block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    column-gap: 23px;
+}
+
+.section.brands-container .brands-wrapper:nth-child(2) {
+    padding: 0;
+    margin: 0 auto 120px;
+    max-width: var(--layout-content-lg);
+}
+
+.section.brands-container .brands-wrapper:nth-child(2) .brands.block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 85px;
+    justify-content: center;
+}
+
+.section.brands-container .brands-wrapper:nth-child(2) .brands.block > div:first-child {
+    display: grid;
+    flex: unset;
+    width: 100%;
+}
+
+.section.brands-container .brands-wrapper:nth-child(3) .brands.block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 80px;
+}
+
+.section.brands-container .brands-wrapper:nth-child(3) .brands.block > div:first-child {
+    display: grid;
+    flex: unset;
+    width: 100%;
+}
+
+@media (width <= 1024px) {
+    main > .section.brands-container {
+        margin: 0 auto 60px;
+    }
+
+    .section.brands-container .brands.block h2 {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+        margin: 0 0 20px;
+    }
+
+    .section.brands-container .brands-wrapper:first-child .brands.block,
+    .section.brands-container .brands-wrapper:nth-child(3) .brands.block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        column-gap: normal;
+    }
+
+    .section.brands-container .brands-wrapper:nth-child(2) .brands.block {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 25px;
+        gap: 35px normal;
+        align-items: center;
+        justify-content: center;
+    }
+}
