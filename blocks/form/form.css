@@ -224,6 +224,65 @@ main > .section.form-container {
     font-size: var(--body-font-p-20);
 }
 
+/* POP UP CONTACT */
+.section.form-container.popup-success-container {
+    background: rgba(5 16 42 / 84%); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    z-index: 4;
+    padding: 0;
+    margin: 0;
+    background: red;
+}
+
+.section.form-container.popup-success-container .form-wrapper {
+    grid-column: 2/2;
+    grid-row-start: 1;
+    background: var(--color-white);
+    grid-template-columns: 1fr;
+}
+
+.section.form-container.popup-success-container .form-wrapper .form.block form {
+    flex-direction: column;
+}
+
+.section.form-container.popup-success-container .popup-success-wrapper {
+    display: grid;
+    grid-area: fullform;
+    padding: 0;
+}
+
+.section.form-container.popup-success-container .default-content-wrapper:first-child {
+    background: pink;
+    display: grid;
+    /*grid-area: fullform;*/
+    height: 100%;
+    grid-column: 2;
+    width: 100%;
+    grid-row-start:  1;
+  grid-column-end: span 2
+}
+
+.section.form-container.popup-success-container form .field-wrapper input,
+.section.form-container.popup-success-container form .field-wrapper select,
+.section.form-container.popup-success-container form .field-wrapper:not(.checkbox-wrapper){
+    background: rgba(236 238 241 / 1);
+}
+
+.section.form-container.popup-success-container form .field-wrapper.submit-wrapper {
+    background: var(--color-white);
+}
+
+.section.form-container.popup-success-container .popup-success.block {
+    background: var(--color-white);
+}
+
 @media (width <= 1024px) {
     main > .section.form-container {
         padding: 64px 24px 0;
