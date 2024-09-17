@@ -386,8 +386,6 @@ input[type="radio"]::after {
       content: '';
       height: 1.6rem;
       width: 1.6rem;
-      left: 2.3px;
-      top: 2.2px;
 }
 
 input[type="radio"]:checked {
@@ -456,6 +454,13 @@ select {
   background-size: contain;
   color: var(--color-gray45);
   width: 100%;
+}
+
+/* Forms */
+.form-container h3 {
+  font-weight: 800;
+  font-size: var(--head-font-32);
+  line-height: var(--head-font-32);
 }
 
 /* links */
@@ -559,4 +564,12 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+@media (width <= 1024px) {
+  /* Forms */
+  .form-container h3 {
+    font-size: var(--heading-font-size-s);
+    line-height: var(--heading-font-size-s);
+  }
 }

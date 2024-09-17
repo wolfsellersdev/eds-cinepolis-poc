@@ -1,7 +1,7 @@
 
 
 main > .section.form-container {
-    padding: 80px 0;
+    padding: 80px 25px;
     margin: 40px auto 80px;
     background: var(--color-backg-blue-light);
     display: grid;
@@ -160,6 +160,9 @@ main > .section.form-container {
 
 .form.contact.block form .field-wrapper.radio-wrapper input {
     border: 1px solid var(--color-grayc7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form.contact.block form .field-wrapper.radio-wrapper label {
@@ -204,9 +207,26 @@ main > .section.form-container {
     border: 0;   
 }
 
+.section.form-container .form-container-wrapper:first-child {
+    display: grid;
+    max-width: var(--layout-content-lg);
+}
+
+.section.form-container .form-container-wrapper:first-child .form-container.block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section.form-container .form-container-wrapper:first-child .form-container.block  p {
+    font-weight: 500;
+    line-height: 25px;
+    margin: 25px 0;
+    font-size: var(--body-font-p-20);
+}
+
 @media (width <= 1024px) {
     main > .section.form-container {
-        padding: 0;
+        padding: 64px 24px 0;
     }
 
     .section.form-container .form-wrapper {
@@ -220,6 +240,15 @@ main > .section.form-container {
         grid-column: 1/2;
     }
 
+    .form.block form .field-wrapper:nth-child(5),
+    .form.block form .field-wrapper:nth-child(8) {
+        width: 100%;
+    }
+
+    .form.contact.block form .field-wrapper.radio-wrapper {
+        width: auto;
+    }
+
     .form.block form .field-wrapper.checkbox-wrapper label {
         font-size: var(--body-font-p-16);
         line-height: 19.2px;
@@ -228,5 +257,14 @@ main > .section.form-container {
     .form.block form .field-wrapper.submit-wrapper {
         justify-content: center;
         margin: 60px 0 0;
+    }
+
+    .section.form-container .form-container-wrapper:first-child .form-container.block {
+        grid-template-columns: 1fr;
+    }
+    
+    .section.form-container .form-container-wrapper:first-child .form-container.block  p {
+        line-height: 22.5px;
+        font-size: var(--body-font-p-18);
     }
 }

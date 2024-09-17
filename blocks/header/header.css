@@ -129,6 +129,10 @@ header .default-content-wrapper >ul > li:hover {
     padding: 17px;
 }
 
+#nav .section:nth-child(1) .default-content-wrapper {
+    display: flex;
+}
+
 #nav .section:nth-child(1) .default-content-wrapper > ul >li:nth-child(2) > ul >li {
     min-width: 208px;
 }
