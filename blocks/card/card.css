@@ -1,7 +1,7 @@
 /* stylelint-disable no-empty-source */
 
 main > .section.card-container {
-    max-width: var(--layout-content);
+    max-width: var(--layout-content); 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -31,6 +31,10 @@ main > .section.card-container {
     line-height: 25px;
 }
 
+.section.card-container .card.foundation.block {
+    margin: 0 0 80px;
+}
+
 @media (width <= 1024px) {
     .section.card-container .card.block {
         padding: 25px 20px;
@@ -51,5 +55,9 @@ main > .section.card-container {
     .section.card-container .card.not-rounder-border.block {
         border-radius: inherit;
         margin: 0;
+    }
+    
+    .section.card-container .card.foundation.block {
+        margin: 0 0 66px;
     }
 }

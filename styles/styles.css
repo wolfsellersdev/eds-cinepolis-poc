@@ -88,6 +88,7 @@
   --body-font-p-20: 20px;
   --body-font-p-18: 18px;
   --body-font-p-16: 16px;
+  --body-font-p-14: 14px;
   --body-font-p-13: 13px;
   --body-font-p-12: 12px;
   --body-font-p-11: 11px;
@@ -218,7 +219,7 @@
 
     /* heading sizes */
     --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
+    --heading-font-size-xl: 40px;
     --heading-font-size-l: 28px;
     --heading-font-size-m: 22px;
     --heading-font-size-s: 20px;
@@ -317,6 +318,149 @@ textarea,
 select,
 button {
   font: inherit;
+}
+
+::placeholder {
+  font-weight: 700;
+  font-size: var(--body-font-p-16);
+  color: var(--color-gray45);
+  line-height: 19.2px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="search"],
+input[type="number"],
+input[type="datetime"],
+input[type="email"]{
+border: 1px solid var(--color-gray45);
+height: 38px;
+border-radius: var(--radiusitems);
+padding: 0 15px;
+outline: 0 !important;
+color: var(--color-gray45);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="url"]:focus,
+input[type="tel"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="datetime"]:focus,
+input[type="email"]:focus{
+  border-color: var(--color-gray45);
+}
+
+input[type="text"]:focus-visible,
+input[type="password"]:focus-visible,
+input[type="url"]:focus-visible,
+input[type="tel"]:focus-visible,
+input[type="search"]:focus-visible,
+input[type="number"]:focus-visible,
+input[type="datetime"]:focus-visible,
+input[type="email"]:focus-visible {
+  border-color: var(--color-gray45);
+}
+
+input[type="radio"] {
+  border: 0.2rem solid var(--color-grayc7);
+  transition: all 0.3s ease-in-out;
+  appearance: none;
+  background: var(--color-white);
+  display: inline-block;
+  border-radius: 100%;
+  position: relative;
+  cursor: pointer;
+  height: 2.4rem !important;
+  width: 2.4rem;
+}
+
+input[type="radio"]::after {
+      background-color: var(--color-white);
+      border-radius: 2.5rem;
+      position: relative;
+      display: block;
+      content: '';
+      height: 1.6rem;
+      width: 1.6rem;
+}
+
+input[type="radio"]:checked {
+  background-color: var(--color-white);
+  border: 0.2rem solid var(--color-secondary);
+}
+
+input[type="radio"]:checked::after {
+  background-color: var(--color-secondary);
+}
+
+input[type="radio"]:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+input[type="checkbox"] {
+  width: 24px;
+  height: 24px !important;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-graya2);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  appearance: none;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-secondary);
+  background-position: 0 0;
+}
+
+input[type="checkbox"]:checked::after {
+  width: 4px;
+  height: 9px;
+  content: '';
+  margin-left: 0%;
+  transform: rotate(45deg);
+  border-bottom: 2px solid var(--color-white);
+  border-right: 2px solid var(--color-white);
+  display: inline-block;
+  position: absolute;
+  left: 0.8rem;
+  top: 0.3rem;
+}
+
+textarea {
+  border: 1px solid var(--color-gray45);
+  border-radius: var(--radiusitems);
+  padding: 15px;
+  outline: 0 !important;
+}
+
+select {
+  border: 1px solid var(--color-gray45);
+  border-radius: var(--radiusitems);
+  padding-left: 15px;
+  padding-right: 45px;
+  outline: 0 !important;
+  height: 38px;
+  appearance: none;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-color: var(--color-white);
+  background-size: contain;
+  color: var(--color-gray45);
+  width: 100%;
+}
+
+/* Forms */
+.form-container h3 {
+  font-weight: 800;
+  font-size: var(--head-font-32);
+  line-height: var(--head-font-32);
 }
 
 /* links */
@@ -420,4 +564,12 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+@media (width <= 1024px) {
+  /* Forms */
+  .form-container h3 {
+    font-size: var(--heading-font-size-s);
+    line-height: var(--heading-font-size-s);
+  }
 }
