@@ -237,7 +237,6 @@ main > .section.form-container {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     box-sizing: border-box;
-    align-content: center;
     align-items: center;
     position: fixed;
     display: grid;
@@ -280,7 +279,6 @@ main > .section.form-container {
 
 .section.form-container.popup-success-container .popup-success-wrapper {
     display: grid;
-    /*grid-area: fullform;*/
     justify-content: flex-end;
     height: 100%;
     width: 100%;
@@ -338,13 +336,6 @@ main > .section.form-container {
     max-width: 438px;
 }
 
-.section.form-container.popup-success-container .popup-success-wrapper p {
-    font-size: var(--body-font-p-18);
-    line-height: 22.5px;
-    margin: 25px 0 0 0;
-    font-weight: 400;
-}
-
 .section.form-container.popup-success-container .default-content-wrapper:first-child {
     display: grid;
     height: 100%;
@@ -362,7 +353,7 @@ main > .section.form-container {
 .section.form-container.popup-success-container .default-content-wrapper:first-child h3 {
     font-size: var(--body-font-p-24);
     line-height: 28.8px;
-    padding: 0 30px 0;
+    padding: 0 30px;
     font-weight: 700;
 }
 
@@ -469,6 +460,13 @@ main > .section.form-container {
         grid-template-columns: 1fr;
     }
     
+    .section.form-container.popup-success-container .popup-success-wrapper p {
+        font-size: var(--body-font-p-18);
+        line-height: 22.5px;
+        margin: 25px 0 0;
+        font-weight: 400;
+    }
+
     .section.form-container .form-container-wrapper:first-child .form-container.block  p {
         line-height: 22.5px;
         font-size: var(--body-font-p-18);
@@ -479,15 +477,11 @@ main > .section.form-container {
     .section.form-container.popup-success-container form .field-wrapper:not(.checkbox-wrapper){
         max-width: none;
     }
-    
-    /* POP UP CONTACT */
-    .section.form-container.popup-success-container {
-        padding: 85px 0 0;
-    }
 
     .section.form-container.popup-success-container .form-wrapper .form.pop-donate-vertical form {
         width: 100%;
     } 
+
     .section.form-container.popup-success-container .form.pop-donate-vertical form .field-wrapper input,
     .section.form-container.popup-success-container .form.pop-donate-vertical form .field-wrapper select,
     .section.form-container.popup-success-container .form.pop-donate-vertical form .field-wrapper:not(.checkbox-wrapper){
@@ -499,12 +493,12 @@ main > .section.form-container {
     }
 
     .section.form-container.popup-success-container {
+        padding: 85px 0 0;
         grid-template-columns: 1fr;
         height: 100%;
         display: flex;
         grid-template-areas: none;
         flex-direction: column-reverse;
-        justify-content: center;
         overflow-y: scroll;
         justify-content: normal;
     }
@@ -526,6 +520,8 @@ main > .section.form-container {
         height: auto;
         grid-area: auto;
         justify-content: center;
+        background: var(--color-white);
+        border-radius: var(--radiusitems) var(--radiusitems) 0 0;
     }
 
     .section.form-container.popup-success-container .default-content-wrapper:first-child {
@@ -539,18 +535,13 @@ main > .section.form-container {
         font-size: var(--body-font-p-20);
         line-height: var(--body-font-p-24);
         position: absolute;
-        padding: 0 50px 0;
+        padding: 0 50px;
         top: 92px;
         margin: 0;
     } 
 
     .section.form-container.popup-success-container .default-content-wrapper:first-child p {
         display: none;
-    }
-
-    .section.form-container.popup-success-container .popup-success-wrapper {
-        background: var(--color-white);
-        border-radius: var(--radiusitems) var(--radiusitems) 0 0;
     }
 
     .section.form-container.popup-success-container .popup-success-wrapper .popup-success.block {
