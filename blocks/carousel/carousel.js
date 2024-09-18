@@ -1,7 +1,7 @@
 export default async function decorate(block) {
   const cardsToShow = 3;
   const cards = [...block.children];
-  const parentElement = block.parentElement;
+  const {parentElement} = block;
   let index = 0;
   let startX = 0;
   let startY = 0;
@@ -12,9 +12,9 @@ export default async function decorate(block) {
   const allowedTime = 500; // Max time for a valid swipe
   let startTime = 0;
 
-  const renderCards = () => { 
+  const renderCards = () => {
     block.innerHTML = '';
-    cards.slice(index, index + cardsToShow).forEach( e => {
+    cards.slice(index, index+cardsToShow).forEach(e => {
       block.appendChild(e);
     });
   }
