@@ -32,14 +32,14 @@ export default async function decorate(block) {
       distX = touchObj.pageX - startX;
       distY = touchObj.pageY - startY;
       const elapsedTime = new Date().getTime() - startTime;
-      if( elapsedTime <= allowedTime &&
-         Math.abs(distX) >= threshold &&
-         Math.abs(distY) <= restaint ) {
-        if( distX < 0 && (index + 1) <= (cards.length - cardsToShow)) {
-          index++;
+      if (elapsedTime <= allowedTime
+         && Math.abs(distX) >= threshold
+         && Math.abs(distY) <= restaint) {
+        if (distX < 0 && (index + 1) <= (cards.length - cardsToShow)) {
+          index += 1;
           renderCards();
         } else if( distX > 0 && (index - 1) >= 0) {
-          index--;
+          index -= 1;
           renderCards();
         }
       }
