@@ -130,10 +130,6 @@ main > .section.form-container {
     height: 0;
 }
 
-.section.form-container.popup-donate-container-container {
-    overflow-y: scroll;
-}
-
 .section.form-container.popup-donate-container-container form .field-wrapper input,
 .section.form-container.popup-donate-container-container form .field-wrapper select,
 .section.form-container.popup-donate-container-container form .field-wrapper:not(.checkbox-wrapper){
@@ -268,6 +264,7 @@ main > .section.form-container {
     justify-content: center;
     box-sizing: border-box;
     align-items: center;
+    overflow-y: scroll;
     position: fixed;
     display: grid;
     padding: 40px;
@@ -330,6 +327,7 @@ main > .section.form-container {
     height: 44px;
     width: 44px;
 }
+
 .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child div:last-child p {
     font-size: 0;
 }
