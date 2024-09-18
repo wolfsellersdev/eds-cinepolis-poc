@@ -430,6 +430,65 @@ main > .section.form-container {
     background: var(--color-white);
 }
 
+/* POP UP SUCCESS */
+.section.popup-success-container {
+    background: rgba(5 16 42 / 84%); 
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    overflow-y: scroll;
+    position: fixed;
+    display: flex;
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    margin: 0;
+    left: 0;
+    top: 0;
+}
+
+.section.popup-success-container .popup-success.block {
+    background: var(--color-white);
+    border-radius: var(--radiuspopup);
+    max-width: var(--layout-content);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    padding: 40px;
+}
+
+.section.popup-success-container .popup-success.block > div {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section.popup-success-container .popup-success.block > div:first-child img {
+    vertical-align: middle;
+    max-width: 191px;
+}
+
+.section.popup-success-container .popup-success.block > div:last-child img {
+    background: red;
+    min-width: 220px;
+}
+
+.section.popup-success-container .popup-success.block > div h3 {
+    font-size:var(--head-font-32);
+    line-height: var(--head-font-32);
+    margin: 0 0 15px;
+    font-weight: 800;
+}
+
+.section.popup-success-container .popup-success.block > div p {
+    font-size:var(--body-font-p-18);
+    line-height: 22.5px;
+    font-weight: 400;
+}
+
 @media (width <= 1024px) {
     main > .section.form-container {
         padding: 64px 24px 0;
