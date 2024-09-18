@@ -38,7 +38,7 @@ export default async function decorate(block) {
         if (distX < 0 && (index + 1) <= (cards.length - cardsToShow)) {
           index += 1;
           renderCards();
-        } else if( distX > 0 && (index - 1) >= 0) {
+        } else if (distX > 0 && (index - 1) >= 0) {
           index -= 1;
           renderCards();
         }
@@ -50,8 +50,8 @@ export default async function decorate(block) {
   btnLeft.innerText = '<-- ';
   btnLeft.classList.add('prev-image');
   btnLeft.addEventListener('click', () => {
-    if( index - 1 >= 0 ) {
-      index--;
+    if (index - 1 >= 0) {
+      index -= 1;
       renderCards();
     }
   });
@@ -60,16 +60,14 @@ export default async function decorate(block) {
   btnRight.innerText = ' -->';
   btnRight.classList.add('next-image');
   btnRight.addEventListener('click', () => {
-    if( index + 1 <= (cards.length - cardsToShow) ){
-      index++;
+    if (index + 1 <= (cards.length - cardsToShow)) {
+      index += 1;
       renderCards();
     }
   });
 
   renderCards();
-
   parentElement.appendChild(btnLeft);
   parentElement.appendChild(btnRight);
 
 }
-  
