@@ -21,7 +21,7 @@ export default async function decorate(block) {
     });
   }
 
-  if( 'ontouchstart' in window || navigator.maxTouchPoints > 0 ){
+  if('ontouchstart' in window || navigator.maxTouchPoints > 0){
     block.addEventListener( 'touchstart',  e => {
       const touchObj = e.changedTouches[0];
       startX = touchObj.pageX;
@@ -29,7 +29,7 @@ export default async function decorate(block) {
       startTime = new Date().getTime();
       e.preventDefault();
     }, false);
-    block.addEventListener( 'touchend', e => {
+    block.addEventListener('touchend', e => {
       const touchObj = e.changedTouches[0];
       distX = touchObj.pageX - startX;
       distY = touchObj.pageY - startY;
