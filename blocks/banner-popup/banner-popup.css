@@ -35,6 +35,12 @@ main > .section.banner-popup-container {
 }
 
 .banner-popup.block >div div:last-child p:last-child {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.banner-popup.block >div div:last-child p:last-child a {
     max-width: 257px;
     margin-top: 20px;
     background: var(--color-secondary);
@@ -45,6 +51,7 @@ main > .section.banner-popup-container {
     text-align: center;
     padding: 20px 8px;
     font-weight: 700;
+    width: 100%;
 }
 
 .banner-popup.block picture img {
