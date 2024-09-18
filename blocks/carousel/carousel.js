@@ -1,19 +1,17 @@
 export default async function decorate(block) {
-
   const cardsToShow = 3;
   const cards = [...block.children];
   const parentElement = block.parentElement;
-  let index  = 0;
+  let index = 0;
   let startX = 0;
   let startY = 0;
-  let distX  = 0;
-  let distY  = 0;
+  let distX = 0;
+  let distY = 0;
   const threshold = 50; // Min distance to cosider a swipe
-  const restaint  = 100; // Max distance in the Y axis to consider a swipe
+  const restaint = 100; // Max distance in the Y axis to consider a swipe
   const allowedTime = 500; // Max time for a valid swipe
   let startTime = 0;
 
-    
   const renderCards = () => { 
     block.innerHTML = '';
     cards.slice(index, index + cardsToShow).forEach( e => {
@@ -46,7 +44,6 @@ export default async function decorate(block) {
     });
   }
 
-
   const btnLeft = document.createElement('a');
   btnLeft.innerText = '<-- ';
   btnLeft.classList.add('prev-image');
@@ -71,5 +68,6 @@ export default async function decorate(block) {
 
   parentElement.appendChild(btnLeft);
   parentElement.appendChild(btnRight);
+
 }
   
