@@ -26,7 +26,21 @@ header.header-wrapper .header.block {
     width: 100%;
 }
 
+#nav .section:first-child {
+    display: none;
+}
+
 #nav .section:nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex:1 ;
+}
+
+#nav .section:nth-child(2) .default-content-wrapper {
+    display: flex;
+}
+
+#nav .section:nth-child(3) {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -157,8 +171,12 @@ header .default-content-wrapper >ul > li:hover {
         height: 72px;
     }
 
-    #nav >.section:first-child,
-    #nav >.section:nth-child(3) {
+    #nav .section:first-child {
+        display: block;
+    }
+
+    #nav >.section:nth-child(2),
+    #nav >.section:nth-child(4) {
         display: none;
     }
 

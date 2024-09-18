@@ -115,6 +115,13 @@ main > .section.form-container {
     height: 0;
 }
 
+.section.form-container.popup-success-container form .field-wrapper input,
+.section.form-container.popup-success-container form .field-wrapper select,
+.section.form-container.popup-success-container form .field-wrapper:not(.checkbox-wrapper){
+    background-color: rgba(236 238 241 / 100%);
+    max-width: 398px;
+}
+
 .form.popup.block form .field-wrapper.file-wrapper input {
     width: 100%;
 }
@@ -227,26 +234,45 @@ main > .section.form-container {
 /* POP UP CONTACT */
 .section.form-container.popup-success-container {
     background: rgba(5 16 42 / 84%); 
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
+    box-sizing: border-box;
+    align-content: center;
     align-items: center;
+    position: fixed;
+    display: grid;
+    padding: 40px;
     height: 100%;
+    width: 100%;
     z-index: 4;
-    padding: 0;
     margin: 0;
-    background: red;
+    left: 0;
+    top: 0;
 }
 
 .section.form-container.popup-success-container .form-wrapper {
     grid-column: 2/2;
     grid-row-start: 1;
-    background: var(--color-white);
     grid-template-columns: 1fr;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    align-items: end;
+    height: 100%;
+    width: 100%;
+    padding: 0;
 }
+
+.section.form-container.popup-success-container .form-wrapper .form.block {
+    border-radius: 0 var(--radiuspopup) var(--radiuspopup) 0;
+    background-color: var(--color-white);
+    box-sizing: border-box;
+    padding: 217px 40px 0 25px;
+    max-width: 463px;
+    display: flex;
+    align-items: end;
+    height: 100%;
+}
+
 
 .section.form-container.popup-success-container .form-wrapper .form.block form {
     flex-direction: column;
@@ -254,33 +280,154 @@ main > .section.form-container {
 
 .section.form-container.popup-success-container .popup-success-wrapper {
     display: grid;
-    grid-area: fullform;
+    /*grid-area: fullform;*/
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
     padding: 0;
 }
 
+.section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child {
+    margin: 0 0 40px;
+}
+
+.section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:last-child {
+    background: var(--color-grayf5);
+    border-radius: 1.2rem;
+    box-sizing: border-box;
+    font-style: normal;
+    position: relative;
+    cursor: pointer;
+    padding: .8rem;
+    display: none;
+    height: 44px;
+    width: 44px;
+}
+
+.section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:last-child p {
+    font-size: 0;
+}
+
+.section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:last-child::before,
+.section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:last-child::after {
+    content:'';
+    background-color: var(--color-link-15);
+    border-radius: 0.2rem;
+    position:absolute;
+    width: 1.5rem;
+    height: 0.2rem;
+    top: 2rem;
+}
+
+.section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:last-child::before {
+    transform:rotate(45deg);
+        left: 1.5rem;
+}
+
+.section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:last-child::after {
+    transform:rotate(-45deg);
+    right: 1.4rem;
+}
+
+.section.form-container.popup-success-container .popup-success-wrapper .popup-success.block {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: var(--radiuspopup) 0 0 var(--radiuspopup);
+    padding: 40px 0 40px 40px;
+    max-width: 438px;
+}
+
+.section.form-container.popup-success-container .popup-success-wrapper p {
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+    margin: 25px 0 0 0;
+    font-weight: 400;
+}
+
 .section.form-container.popup-success-container .default-content-wrapper:first-child {
-    background: pink;
     display: grid;
-    /*grid-area: fullform;*/
     height: 100%;
     grid-column: 2;
     width: 100%;
     grid-row-start:  1;
-  grid-column-end: span 2
+    grid-column-end: span 2;
+    box-sizing: border-box;
+    pointer-events: none;
+    padding: 133px 0 0;
+    position: relative;
+    z-index: 3;
 }
 
-.section.form-container.popup-success-container form .field-wrapper input,
-.section.form-container.popup-success-container form .field-wrapper select,
-.section.form-container.popup-success-container form .field-wrapper:not(.checkbox-wrapper){
-    background: rgba(236 238 241 / 1);
+.section.form-container.popup-success-container .default-content-wrapper:first-child h3 {
+    font-size: var(--body-font-p-24);
+    line-height: 28.8px;
+    padding: 0 30px 0;
+    font-weight: 700;
+}
+
+
+.section.form-container.popup-success-container .default-content-wrapper:first-child p {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: absolute;
+    top: 46px;
+    max-width: 461px;
+    width: 100%;
+}
+
+.section.form-container.popup-success-container .default-content-wrapper:first-child p:after {
+    content: 'Cerrar';
+    font-weight: 700;
+    font-size: var(--body-font-p-16);
+    line-height: 19.2px;
+}
+
+.section.form-container.popup-success-container .default-content-wrapper:first-child p strong {
+    background: var(--color-grayf5);
+    box-sizing: border-box;
+    border-radius: 1.2rem;
+    margin: 0 40px 0 20px;
+    pointer-events: auto;
+    font-style: normal;
+    position: relative;
+    cursor: pointer;
+    padding: .8rem;
+    font-size: 0;
+    height: 44px;
+    width: 44px;
+}
+
+.section.form-container.popup-success-container .default-content-wrapper:first-child p strong::before,
+.section.form-container.popup-success-container .default-content-wrapper:first-child p strong::after {
+    content:'';
+    background-color: var(--color-link-15);
+    border-radius: 0.2rem;
+    position:absolute;
+    width: 1.5rem;
+    height: 0.2rem;
+    top: 2rem;
+}
+
+.section.form-container.popup-success-container .default-content-wrapper:first-child p strong::before {
+    transform:rotate(45deg);
+    right: 1.5rem;
+}
+
+.section.form-container.popup-success-container .default-content-wrapper:first-child p strong::after {
+    transform:rotate(-45deg);
+    right: 1.4rem;
 }
 
 .section.form-container.popup-success-container form .field-wrapper.submit-wrapper {
     background: var(--color-white);
 }
 
-.section.form-container.popup-success-container .popup-success.block {
-    background: var(--color-white);
+.section.form-container.popup-success-container .popup-success.block > div:last-child {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 @media (width <= 1024px) {
@@ -325,5 +472,114 @@ main > .section.form-container {
     .section.form-container .form-container-wrapper:first-child .form-container.block  p {
         line-height: 22.5px;
         font-size: var(--body-font-p-18);
+    }
+
+    .section.form-container.popup-success-container form .field-wrapper input,
+    .section.form-container.popup-success-container form .field-wrapper select,
+    .section.form-container.popup-success-container form .field-wrapper:not(.checkbox-wrapper){
+        max-width: none;
+    }
+    
+    /* POP UP CONTACT */
+    .section.form-container.popup-success-container {
+        padding: 85px 0 0;
+    }
+
+    .section.form-container.popup-success-container .form-wrapper .form.pop-donate-vertical form {
+        width: 100%;
+    } 
+    .section.form-container.popup-success-container .form.pop-donate-vertical form .field-wrapper input,
+    .section.form-container.popup-success-container .form.pop-donate-vertical form .field-wrapper select,
+    .section.form-container.popup-success-container .form.pop-donate-vertical form .field-wrapper:not(.checkbox-wrapper){
+        width: inherit;
+    }
+
+    .section.form-container.popup-success-container .form.pop-donate-vertical form .field-wrapper.checkbox-wrapper input {
+        width: 24px;
+    }
+
+    .section.form-container.popup-success-container {
+        grid-template-columns: 1fr;
+        height: 100%;
+        display: flex;
+        grid-template-areas: none;
+        flex-direction: column-reverse;
+        justify-content: center;
+        overflow-y: scroll;
+        justify-content: normal;
+    }
+
+    .section.form-container.popup-success-container .form-wrapper {
+        height: auto;
+        grid-column: auto;
+        grid-row-start: none;
+    }
+
+    .section.form-container.popup-success-container .form-wrapper .form.block {
+        max-width: none;
+        align-items: normal;
+        border-radius: 0;
+        padding: 0 25px;
+    }
+
+    .section.form-container.popup-success-container .popup-success-wrapper {
+        height: auto;
+        grid-area: auto;
+        justify-content: center;
+    }
+
+    .section.form-container.popup-success-container .default-content-wrapper:first-child {
+        padding: 0;
+        position: relative;
+        grid-column: 1;
+        order: 1;
+    }
+
+    .section.form-container.popup-success-container .default-content-wrapper:first-child h3 {
+        font-size: var(--body-font-p-20);
+        line-height: var(--body-font-p-24);
+        position: absolute;
+        padding: 0 50px 0;
+        top: 92px;
+        margin: 0;
+    } 
+
+    .section.form-container.popup-success-container .default-content-wrapper:first-child p {
+        display: none;
+    }
+
+    .section.form-container.popup-success-container .popup-success-wrapper {
+        background: var(--color-white);
+        border-radius: var(--radiusitems) var(--radiusitems) 0 0;
+    }
+
+    .section.form-container.popup-success-container .popup-success-wrapper .popup-success.block {
+        padding: 24px;
+    }
+
+    .section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child {
+        position: relative;
+        margin-bottom: 57px;
+    }
+
+    .section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:last-child {
+        display: block;
+        margin-left: 40px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:last-child p {
+        font-size: var(--body-font-p-16);
+        line-height: 19.2px;
+        position: relative;
+        font-weight: 700;
+        left: -80px;
+        top: -23px;
+    }
+
+    .section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child div:first-child img {
+        max-width: 147px;
     }
 }
