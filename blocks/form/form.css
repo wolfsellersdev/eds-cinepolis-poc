@@ -224,6 +224,17 @@ main > .section.form-container {
     grid-template-columns: 1fr 1fr;
 }
 
+.section.form-container.popup-success-container .default-content-wrapper:first-child p {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: absolute;
+    top: 46px;
+    max-width: 461px;
+    width: 100%;
+}
+
 .section.form-container .form-container-wrapper:first-child .form-container.block  p {
     font-weight: 500;
     line-height: 25px;
@@ -357,19 +368,7 @@ main > .section.form-container {
     font-weight: 700;
 }
 
-
-.section.form-container.popup-success-container .default-content-wrapper:first-child p {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
-    align-items: center;
-    position: absolute;
-    top: 46px;
-    max-width: 461px;
-    width: 100%;
-}
-
-.section.form-container.popup-success-container .default-content-wrapper:first-child p:after {
+.section.form-container.popup-success-container .default-content-wrapper:first-child p::after {
     content: 'Cerrar';
     font-weight: 700;
     font-size: var(--body-font-p-16);
@@ -416,11 +415,6 @@ main > .section.form-container {
     background: var(--color-white);
 }
 
-.section.form-container.popup-success-container .popup-success.block > div:last-child {
-    display: flex;
-    flex-direction: column-reverse;
-}
-
 @media (width <= 1024px) {
     main > .section.form-container {
         padding: 64px 24px 0;
@@ -438,8 +432,10 @@ main > .section.form-container {
     }
 
     .form.block form .field-wrapper:nth-child(5),
-    .form.block form .field-wrapper:nth-child(8) {
+    .form.block form .field-wrapper:nth-child(8),
+    .form.block form .field-wrapper:nth-child(9) {
         width: 100%;
+        flex: auto;
     }
 
     .form.contact.block form .field-wrapper.radio-wrapper {
@@ -465,6 +461,10 @@ main > .section.form-container {
         line-height: 22.5px;
         margin: 25px 0 0;
         font-weight: 400;
+    }
+
+    .section.form-container.popup-success-container .default-content-wrapper:first-child p {
+        display: none;
     }
 
     .section.form-container .form-container-wrapper:first-child .form-container.block  p {
@@ -540,12 +540,13 @@ main > .section.form-container {
         margin: 0;
     } 
 
-    .section.form-container.popup-success-container .default-content-wrapper:first-child p {
-        display: none;
-    }
-
     .section.form-container.popup-success-container .popup-success-wrapper .popup-success.block {
         padding: 24px;
+    }
+
+    .section.form-container.popup-success-container .popup-success.block > div:last-child {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .section.form-container.popup-success-container .popup-success-wrapper .popup-success.block >div:first-child {
