@@ -1,7 +1,7 @@
 export default async function decorate(block) {
   const cardsToShow = 3;
   const cards = [...block.children];
-  const {parentElement} = block;
+  const { parentElement } = block;
   let index = 0;
   let startX = 0;
   let startY = 0;
@@ -14,25 +14,27 @@ export default async function decorate(block) {
 
   const renderCards = () => {
     block.innerHTML = '';
-    cards.slice(index, index+cardsToShow).forEach(e => {
+    cards.slice(index, index + cardsToShow).forEach((e) => {
       block.appendChild(e);
     });
-  }
+  };
 
-  if('ontouchstart' in window || navigator.maxTouchPoints > 0){
-    block.addEventListener( 'touchstart',  e => {
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    block.addEventListener('touchstart', (e) => {
       const touchObj = e.changedTouches[0];
       startX = touchObj.pageX;
       startY = touchObj.pageY;
       startTime = new Date().getTime();
       e.preventDefault();
     }, false);
-    block.addEventListener('touchend', e => {
+    block.addEventListener('touchend', (e) => {
       const touchObj = e.changedTouches[0];
       distX = touchObj.pageX - startX;
       distY = touchObj.pageY - startY;
       const elapsedTime = new Date().getTime() - startTime;
-      if( elapsedTime <= allowedTime && Math.abs(distX) >= threshold && Math.abs(distY) <= restaint ) {
+      if( elapsedTime <= allowedTime &&
+         Math.abs(distX) >= threshold &&
+         Math.abs(distY) <= restaint ) {
         if( distX < 0 && (index + 1) <= (cards.length - cardsToShow)) {
           index++;
           renderCards();
