@@ -257,6 +257,15 @@ main > .section.form-container {
     width: 100%;
 }
 
+/* popSuccess */
+.section.popup-success-container .popup-success.block > div:first-child p {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 5px;
+}
+
 .section.form-container .form-container-wrapper:first-child .form-container.block  p {
     font-weight: 500;
     line-height: 25px;
@@ -491,14 +500,6 @@ main > .section.form-container {
     border-radius: var(--radiuspopup);
 }
 
-.section.popup-success-container .popup-success.block > div:first-child p {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    align-items: center;
-    column-gap: 5px;
-}
-
 .section.popup-success-container .popup-success.block > div:first-child p::after {
     content: 'Cerrar';
     font-weight: 700;
@@ -678,6 +679,11 @@ main > .section.form-container {
         padding: 24px;
     }
 
+    .section.popup-success-container .popup-success.block > div:last-child {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+
     .section.form-container.popup-donate-container-container .popup-donate-container.block > div:last-child {
         display: flex;
         flex-direction: column-reverse;
@@ -705,6 +711,14 @@ main > .section.form-container {
         top: -23px;
     }
 
+    /* POP UP SUCCESS */
+    .section.popup-success-container .popup-success.block > div:last-child img {
+        min-width: 342px;
+        max-height: 160px;
+        object-fit: cover;
+        object-view-box: inset(-40% 0% 10% 0%);
+    }
+
     .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child div:first-child img {
         max-width: 147px;
     }
@@ -712,7 +726,7 @@ main > .section.form-container {
     /* POP UP SUCCESS */
     .section.popup-success-container,
     .section.popup-success-container .popup-success-wrapper {
-        padding: 60px 0 0 0;
+        padding: 60px 0 0;
         margin-bottom: 0;
         overflow-y: scroll;
         align-items: flex-start;
@@ -721,17 +735,5 @@ main > .section.form-container {
     .section.popup-success-container .popup-success.block {
         border-radius: var(--radiuspopup) var(--radiuspopup) 0 0;
         padding: 24px;
-    }
-
-    .section.popup-success-container .popup-success.block > div:last-child {
-        flex-direction: column;
-        row-gap: 15px;
-    }
-
-    .section.popup-success-container .popup-success.block > div:last-child img {
-        min-width: 342px;
-        max-height: 160px;
-        object-fit: cover;
-        object-view-box: inset(-40% 0% 10% 0%);
     }
 }
