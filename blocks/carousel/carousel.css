@@ -27,8 +27,10 @@ main > .section.carousel-container .default-content-wrapper {
 }
 
 main > .section.carousel-container .carousel-wrapper {
+    max-width: 1360px;
     padding: 0 0 0 82px;
     overflow: hidden;
+    width: 100%;
 }
 
 main > .section.carousel-container .carousel-wrapper .carousel.text.block {
@@ -42,10 +44,98 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
     padding: 0 25px 40px;
 }
 
+a.prev-image:hover::after,
+a.prev-image:hover::before,
+a.next-image:hover::after,
+a.next-image:hover::before {
+    opacity: 0.6;
+}
+
+main > .section.carousel-container .carousel-wrapper .prev-image,
+main > .section.carousel-container .carousel-wrapper .next-image {
+    background: var(--color-primary);
+    display: inline-flex;
+    position: relative;
+    margin-top: 25px;
+    cursor: pointer;
+    height: 64px;
+    width: 79px;
+    font-size: 0;
+    float: right;
+}
+
+main > .section.carousel-container .carousel-wrapper .prev-image {
+    border-radius: var(--radiusitems) 0  0 var(--radiusitems);
+    margin-right: 190px;
+}
+
+main > .section.carousel-container .carousel-wrapper .next-image {
+    border-radius: 0 var(--radiusitems) var(--radiusitems) 0;
+    margin-right: -158px;
+}
+
 .carousel.gallery.block div p {
     font-size: var(--body-font-p-13);
     line-height: 15.85px;
     font-weight: 400;
+}
+
+main > .section.carousel-container .carousel-wrapper .prev-image::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 4px);
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    border-left: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+    transform: rotate(45deg); 
+    transition: all 0.25s ease;
+    right: 38px;
+    z-index: 1;
+}
+
+main > .section.carousel-container .carousel-wrapper .prev-image::before {
+    border-bottom: 2px solid var(--color-white);
+    position: absolute;
+    display: block;
+    width: 20px;
+    top: 33px;
+    left: 31px;
+    content: '';
+}
+
+main > .section.carousel-container .carousel-wrapper .next-image::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 4px);
+    width: 9px;
+    height: 9px;
+    border-radius: 2px;
+    border-left: 2px solid var(--color-white);
+    border-bottom: 2px solid var(--color-white);
+    transform: rotate(225deg); 
+    transition: all 0.25s ease;
+    right: 27px;
+    z-index: 1;
+}
+
+main > .section.carousel-container .carousel-wrapper .prev-image:first-child::after {
+    border-left: 12px solid var(--color-gray45);
+}
+
+main > .section.carousel-container .carousel-wrapper .next-image:first-child::after {
+    border-left: 12px solid var(--color-gray45);
+}
+
+main > .section.carousel-container .carousel-wrapper .next-image::before {
+    border-bottom: 2px solid var(--color-white);
+    position: absolute;
+    display: block;
+    width: 20px;
+    top: 33px;
+    left: 31px;
+    content: '';
 }
 
 main > .section.carousel-container .carousel-wrapper .carousel.text.block >div div p:first-child {
@@ -204,6 +294,11 @@ main > .section.carousel-container .carousel-wrapper .carousel.text.block >div d
 
     .carousel.gallery.block {
         flex-direction: column;
+    }
+
+    main > .section.carousel-container .carousel-wrapper .prev-image,
+    main > .section.carousel-container .carousel-wrapper .next-image {
+        display: none;
     }
 }
 
