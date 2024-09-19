@@ -1,5 +1,5 @@
 export default async function decorate(block) {
-  const cardsToShow = 3;
+  let cardsToShow = 3;
   const cards = [...block.children];
   const { parentElement } = block;
   let index = 0;
@@ -19,7 +19,32 @@ export default async function decorate(block) {
     });
   };
 
+  const btnLeft = document.createElement('a');
+  btnLeft.innerText = '<-- ';
+  btnLeft.classList.add('prev-image');
+  btnLeft.addEventListener('click', () => {
+    if (index - 1 >= 0) {
+      index -= 1;
+      renderCards();
+    }
+  });
+
+  const btnRight = document.createElement('a');
+  btnRight.innerText = ' -->';
+  btnRight.classList.add('next-image');
+  btnRight.addEventListener('click', () => {
+    if (index + 1 <= (cards.length - cardsToShow)) {
+      index += 1;
+      renderCards();
+    }
+  });
+
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+    if (window.innerWidth <= 768) {
+      cardsToShow = 1;
+      parentElement.removeChild(btnLeft);
+      parentElement.removeChild(btnRight);
+    }
     block.addEventListener('touchstart', (e) => {
       const touchObj = e.changedTouches[0];
       startX = touchObj.pageX;
@@ -45,26 +70,6 @@ export default async function decorate(block) {
       }
     });
   }
-
-  const btnLeft = document.createElement('a');
-  btnLeft.innerText = '<-- ';
-  btnLeft.classList.add('prev-image');
-  btnLeft.addEventListener('click', () => {
-    if (index - 1 >= 0) {
-      index -= 1;
-      renderCards();
-    }
-  });
-
-  const btnRight = document.createElement('a');
-  btnRight.innerText = ' -->';
-  btnRight.classList.add('next-image');
-  btnRight.addEventListener('click', () => {
-    if (index + 1 <= (cards.length - cardsToShow)) {
-      index += 1;
-      renderCards();
-    }
-  });
 
   renderCards();
   parentElement.appendChild(btnLeft);
