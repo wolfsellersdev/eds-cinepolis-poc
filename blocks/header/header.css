@@ -33,6 +33,13 @@ header.header-wrapper .header.block {
     line-height: normal;
     background: transparent;
 }
+
+#nav .section .default-content-wrapper ul li ul li ul picture img {
+    max-width: 160px;
+    max-height: 64px;
+    width: auto;
+}
+
 #nav  .section.home-icon a.button img:hover {
     opacity: 0.8;
 }
@@ -188,12 +195,6 @@ header .default-content-wrapper >ul > li:hover {
 
 #nav .section .default-content-wrapper ul li ul li:nth-child(2) ul li:last-child {
     word-break: break-all;
-}
-
-#nav .section .default-content-wrapper ul li ul li ul picture img {
-    max-width: 160px;
-    max-height: 64px;
-    width: auto;
 }
 
 @media (width <= 960px) {
