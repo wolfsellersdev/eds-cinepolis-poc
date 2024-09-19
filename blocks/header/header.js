@@ -6,10 +6,10 @@ const getTarget = (root) => {
   [...root.querySelectorAll('a')].forEach((link) => {
     if (/\/programas$/.test(link.href)) {
       targetLink = link;
-      targetLink.addEventListener('click', (e) => {e.preventDefault()});
+      targetLink.addEventListener('click', (e) => { e.preventDefault(); });
     }
   });
-  return {targetLink: targetLink.parentElement, ulTarget: targetLink.nextElementSibling};
+  return { targetLink: targetLink.parentElement, ulTarget: targetLink.nextElementSibling };
 };
 
 /**
@@ -26,7 +26,7 @@ export default async function decorate(block) {
   block.textContent = '';
   const nav = document.createElement('nav');
   nav.id = 'nav';
-  const {targetLink, ulTarget} = getTarget(fragment);
+  const { targetLink, ulTarget } = getTarget(fragment);
   const closeBtn = document.createElement('button');
   closeBtn.innerText = 'X';
   ulTarget.appendChild(closeBtn);
@@ -35,7 +35,7 @@ export default async function decorate(block) {
   });
 
   window.addEventListener('click', (e) => {
-    if (e.target !== ulTarget 
+    if (e.target !== ulTarget
       && e.target !== targetLink
       && e.target !== targetLink.querySelector('a')) {
       ulTarget.style.display = 'none';
