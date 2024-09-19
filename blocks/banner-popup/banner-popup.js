@@ -1,7 +1,8 @@
 export default async function decorate(block) {
   const button = block.querySelector('a');
-  button.addEventListener('click', () => {
-    const popup = document.querySelector('[class="section form-container popup-success-container"]');
+  button.addEventListener('click', (e) => {
+    const popup = document.querySelector('[class="section form-container popup-donate-container-container"]');
     popup.removeAttribute('style');
+    e.preventDefault();
   });
 }
