@@ -26,6 +26,17 @@ header.header-wrapper .header.block {
     width: 100%;
 }
 
+#nav  .section.home-icon a.button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    line-height: normal;
+    background: transparent;
+}
+#nav  .section.home-icon a.button img:hover {
+    opacity: 0.8;
+}
+
 #nav .section:first-child {
     display: none;
 }
@@ -126,7 +137,26 @@ header .default-content-wrapper >ul > li:hover {
 /* background: pink; */
 #nav .section .default-content-wrapper >ul >li:nth-child(2) > ul {
     padding: 117px 0 80px;
-    display: none;
+}
+
+#nav .section .default-content-wrapper >ul >li:nth-child(2) > ul button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    position: absolute;
+    max-width: 1420px;
+    border-radius: 0;
+    width: 100%;
+    top: 0;
+}
+
+#nav .section .default-content-wrapper >ul >li:nth-child(2) > ul button::before {
+    content: 'Cerrar';
+    font-weight: 700;
+    margin-right: 20px;
+    line-height: 19.2px;
+    font-size: var(--body-font-p-16);
 }
 
 #nav .section .default-content-wrapper ul li ul li ul li {
