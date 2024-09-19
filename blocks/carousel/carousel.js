@@ -69,5 +69,4 @@ export default async function decorate(block) {
   renderCards();
   parentElement.appendChild(btnLeft);
   parentElement.appendChild(btnRight);
-
 }
