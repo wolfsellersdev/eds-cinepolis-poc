@@ -550,7 +550,8 @@ main > .section.form-container {
 
     .section.form-container .form-wrapper {
         grid-template-columns: 1fr;
-        padding: 64px 24px;
+        box-sizing: border-box;
+        padding: 64px 0;
     }
 
     /* ONLY FORM REGISTRATION */
