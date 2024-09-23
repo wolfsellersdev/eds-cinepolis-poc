@@ -46,6 +46,7 @@
 
 .media-side-text.block > div div:first-child img {
     border-radius: var(--radius-items);
+    object-view-box:inset(0% 0% -20% 0%);
     object-fit: cover;
     height: 511px;
     width: 100%;
