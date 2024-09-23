@@ -52,6 +52,7 @@ main > .section.form-container {
 .form.popup.block form {
     flex-direction: column;
 }
+
 .form-wrapper .form.pop-donate-vertical .file-wrapper {
     display: grid;
     grid-template-areas: "inputchoosefile";
@@ -68,11 +69,6 @@ main > .section.form-container {
     flex: 1;
 }
 
-.form.block form .field-wrapper input {
-    height: auto;
-}
-
-
 .form.block form .field-wrapper select {
     background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOSA3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNy41MzQ4NCAwLjQwMTEyM0M4LjM2MzA4IDAuNDAxMTIzIDguODMyMyAxLjM1MDMyIDguMzI5MzUgMi4wMDgzN0w1LjQ1MTE2IDUuNzc0MTdDNS4wNTA5MSA2LjI5Nzg1IDQuMjYyMzcgNi4yOTc4NCAzLjg2MjEzIDUuNzc0MTdMMC45ODM5MzIgMi4wMDgzN0MwLjQ4MDk4OCAxLjM1MDMyIDAuOTUwMjA4IDAuNDAxMTIzIDEuNzc4NDUgMC40MDExMjNMNy41MzQ4NCAwLjQwMTEyM1oiIGZpbGw9IiM0NzgxRkYiLz4KPC9zdmc+Cg==');
     background-position: right 0.7rem top 50%;
@@ -85,6 +81,10 @@ main > .section.form-container {
     border: 0;
 }
 
+.form.block form .field-wrapper input {
+    height: auto;
+}
+
 .form-wrapper .form.pop-donate-vertical .file-wrapper input {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADdSURBVHgB7ZXRDYIwEIb/EgZwhDqKT7iFo1A30BHcQp8cxY7ABuedgVAbsdfii4Q/IRzX3v+VFlrg32W0HfeOLBncX0WE3dUZr6lTAQJz26e8FpIEfDBHDqTKMPehueSkTfqgBBCby2iHtj72GsgkIDYPp0LiGJIN6DU5zxHkN2qORHLl1KTeYLZWgB7Ai/eQCzMV+9RBm1XUe0UfGz7UyNCtNVtkakGLzL9nJ/fU7vhNQW035MY1IJz5dGh545KvACWiMbgM4duB0zg6MeDAyQ3KAF3FA+WN0GExegJ9N2uJaSuhIwAAAABJRU5ErkJggg==');
     background-position: right 0.7rem top 50%;
@@ -95,6 +95,12 @@ main > .section.form-container {
     color: transparent;
     cursor: pointer;
     width: 100%;
+}
+
+.form.block form .field-wrapper label {
+    font-size: var(--body-font-p-11);
+    line-height: var(--body-font-p-11);
+    font-weight: 500;
 }
 
 .form-wrapper .form.pop-donate-vertical .file-wrapper label {
@@ -118,12 +124,6 @@ main > .section.form-container {
 .form.popup.block form .field-wrapper select {
     background: var(--color-grayec);
     border: none;
-}
-
-.form.block form .field-wrapper label {
-    font-size: var(--body-font-p-11);
-    line-height: var(--body-font-p-11);
-    font-weight: 500;
 }
 
 .form.block form .field-wrapper.submit-wrapper label {
