@@ -85,6 +85,12 @@ main > .section.form-container {
     height: auto;
 }
 
+.form.block form .field-wrapper input,
+.form.block form .field-wrapper textarea {
+    border: none;
+    padding: 0;
+}
+
 .form-wrapper .form.pop-donate-vertical .file-wrapper input {
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADdSURBVHgB7ZXRDYIwEIb/EgZwhDqKT7iFo1A30BHcQp8cxY7ABuedgVAbsdfii4Q/IRzX3v+VFlrg32W0HfeOLBncX0WE3dUZr6lTAQJz26e8FpIEfDBHDqTKMPehueSkTfqgBBCby2iHtj72GsgkIDYPp0LiGJIN6DU5zxHkN2qORHLl1KTeYLZWgB7Ai/eQCzMV+9RBm1XUe0UfGz7UyNCtNVtkakGLzL9nJ/fU7vhNQW035MY1IJz5dGh545KvACWiMbgM4duB0zg6MeDAyQ3KAF3FA+WN0GExegJ9N2uJaSuhIwAAAABJRU5ErkJggg==');
     background-position: right 0.7rem top 50%;
@@ -111,12 +117,6 @@ main > .section.form-container {
     font-weight: 700;
     cursor: pointer;
     width: 90%;
-}
-
-.form.block form .field-wrapper input,
-.form.block form .field-wrapper textarea {
-    border: none;
-    padding: 0;
 }
 
 .form.popup.block form .field-wrapper,
