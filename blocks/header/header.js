@@ -9,6 +9,7 @@ const getTarget = (root) => {
       targetLink.addEventListener('click', (e) => { e.preventDefault(); });
     }
   });
+  targetLink.nextElementSibling.style.display = 'none';
   return { targetLink: targetLink.parentElement, ulTarget: targetLink.nextElementSibling };
 };
 
