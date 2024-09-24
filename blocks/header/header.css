@@ -56,6 +56,7 @@ header.header-wrapper .header.block {
 
 #nav .section:nth-child(2) .default-content-wrapper {
     display: flex;
+    column-gap: 32px;
 }
 
 #nav .section:nth-child(3) {

@@ -167,7 +167,7 @@
 
 @media (width <= 1024px) {
     .footer.block .contact.section-contact.block {
-        padding: 65px 20px 0;
+        padding: 0 20px 89px;
     }
     
     .footer.block .section.contact-container h3 {
@@ -186,7 +186,7 @@
     }
 
     .footer.block .section:nth-child(2) {
-        margin-top: 87px;
+        margin-top: 0;
         padding-bottom: 0;
     }
 
@@ -215,6 +215,7 @@
     }
 
     .footer.block .section.logosleft-container {
+        background: var(--color-primary);
         flex-direction: column;
         padding: 13px 17px;
     }
@@ -238,6 +239,9 @@
         justify-content: center;
         align-items: center;
         height: 58px;
+        box-sizing: border-box;
+        background: var(--color-bkg-logos);
+        border: 1px solid var(--color-primary);
     }
 
     .footer.block .section.logosleft-container .logosleft p span.icon img {

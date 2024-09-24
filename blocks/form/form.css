@@ -112,6 +112,7 @@ main > .section.form-container {
 .form-wrapper .form.pop-donate-vertical .file-wrapper label {
     background:  rgba(236 238 241 / 100%);
     font-size: var(--body-font-p-16);
+    color: var(--color-gray45);
     grid-area: inputchoosefile;
     line-height: 19.2px;
     font-weight: 700;
@@ -376,6 +377,15 @@ main > .section.form-container {
     display: none;
     height: 44px;
     width: 44px;
+}
+
+
+.section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:last-child div p {
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+    margin-top: 25px;
+    font-weight: 400;
+    max-width: 398px;
 }
 
 .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child div:last-child p {
@@ -737,6 +747,11 @@ main > .section.form-container {
         position: absolute;
         right: 0;
         top: 0;
+    }
+
+    .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:last-child div p {
+        margin-top: 0;
+        margin-bottom: 24px;
     }
 
     .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child div:last-child p {
