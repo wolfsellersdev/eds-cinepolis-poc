@@ -379,6 +379,15 @@ main > .section.form-container {
     width: 44px;
 }
 
+
+.section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:last-child div p {
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+    margin-top: 25px;
+    font-weight: 400;
+    max-width: 398px;
+}
+
 .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child div:last-child p {
     font-size: 0;
 }
@@ -402,14 +411,6 @@ main > .section.form-container {
 .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child div:last-child::after {
     transform:rotate(-45deg);
     right: 1.4rem;
-}
-
-.section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:last-child div p {
-    font-size: var(--body-font-p-18);
-    line-height: 22.5px;
-    margin-top: 25px;
-    font-weight: 400;
-    max-width: 398px;
 }
 
 .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block {
@@ -748,6 +749,11 @@ main > .section.form-container {
         top: 0;
     }
 
+    .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:last-child div p {
+        margin-top: 0;
+        margin-bottom: 24px;
+    }
+
     .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child div:last-child p {
         font-size: var(--body-font-p-16);
         line-height: 19.2px;
@@ -771,11 +777,6 @@ main > .section.form-container {
 
     .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:last-child div:last-child {
         margin: 0 auto;
-    }
-
-    .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:last-child div p {
-        margin-top: 0;
-        margin-bottom: 24px;
     }
 
     /* POP UP SUCCESS */
