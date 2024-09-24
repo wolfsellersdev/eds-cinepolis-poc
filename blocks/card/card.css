@@ -58,6 +58,6 @@ main > .section.card-container {
     }
     
     .section.card-container .card.foundation.block {
-        margin: 0 0 66px;
+        margin: 0 24px 66px;
     }
 }

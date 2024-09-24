@@ -38,6 +38,7 @@
   --color-graya2:            #A2ACBA;  
   --color-link-15:           #15274D;
   --color-black:             #000;
+  --color-bkg-logos:         rgba(107 121 153 / 10%);
 
   /* bkg gradients */
   --bkg-gradient-herobanner: linear-gradient(0.25turn, rgba(6 17 43 /100%), rgba(0 0 0 /0%));

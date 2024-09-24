@@ -9,9 +9,18 @@ main > .section.simple-title-paragraph-container {
     max-width: var(--layout-content);
 }
 
+.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.center.block div div h2 {
+    margin-bottom: 25px;
+}
+
 .simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.block div div {
     display: flex;
     flex-direction: column;
+}
+
+.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.center.block div div,
+.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.center.block div div h2,
+.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.center.block div div p {
     align-items: center;
     text-align: center;
 }
@@ -52,10 +61,21 @@ main > .section.simple-title-paragraph-container {
     text-align: left;
 }
 
-.simple-title-paragraph.program-paragraph.block p:last-child {
+.simple-title-paragraph.program-paragraph.block p {
+    font-size: var(--body-font-p-18);
+    line-height: 22.5px;
+}
+
+.simple-title-paragraph.program-paragraph.block p:last-child,
+.simple-title-paragraph.program-paragraph.block p:nth-child(16) {
     font-weight: 500;
     margin-bottom: 0;
 }
+
+.simple-title-paragraph.program-paragraph.block p:nth-child(16) {
+    margin-top: 5px;
+}
+
 
 .simple-title-paragraph.block h2#programas,
 .simple-title-paragraph.block h2#programas + p {
@@ -65,7 +85,7 @@ main > .section.simple-title-paragraph-container {
 
 @media (width <= 1024px) {
     main > .section.simple-title-paragraph-container {
-        margin: 0 auto;
+        margin: 45px auto 0;
     }
 
     .simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.block div div {

@@ -39,7 +39,7 @@ main .section.media-container .media-wrapper {
 
 @media (width <= 1024px) {
     .media.rounded.block {
-        margin: 0 auto 65px;
+        margin: 0 auto 60px;
     }
 
     .media.rounded.margin-top {
