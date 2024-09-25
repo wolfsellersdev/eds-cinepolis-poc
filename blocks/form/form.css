@@ -266,6 +266,43 @@ main > .section.form-container {
     grid-template-columns: 1fr 1fr;
 }
 
+.section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child {
+    height: 0;
+}
+
+.section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child p:last-child {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 0;
+}
+
+.section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child p:last-child br {
+    display: none;
+}
+
+.section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child p:last-child a {
+    border-radius: var(--radiusitems);
+    line-height: var(--body-font-p-24);
+    font-size: var(--body-font-p-20);
+    background: var(--color-blue-b5);
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+    max-width: 280px;
+    cursor: pointer;
+    padding: 16px;
+}
+
+.section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child p:last-child a:hover {
+    color: var(--color-blue-b5);
+    background-color: var(--color-secondary);
+}
+
+.section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child p:last-child a:not(:first-child) {
+    background: transparent;
+}
+
 /* popUp success */
 .section.popup-success-container .popup-success.block > div p {
     font-size:var(--body-font-p-18);
@@ -587,7 +624,7 @@ main > .section.form-container {
     .section.form-container .form-wrapper {
         grid-template-columns: 1fr;
         box-sizing: border-box;
-        padding: 64px 0;
+        padding: 0 0 64px;
     }
 
     /* ONLY FORM REGISTRATION */
@@ -617,8 +654,39 @@ main > .section.form-container {
         margin: 60px 0 0;
     }
 
+    .section.form-container .form-container-wrapper:first-child {
+        padding: 0;
+    }
+
     .section.form-container .form-container-wrapper:first-child .form-container.block {
         grid-template-columns: 1fr;
+    }
+
+    .section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child div {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child div p:first-child {
+        text-align: center;
+    }
+
+    .section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child p:last-child a {
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOSIgaGVpZ2h0PSI3IiB2aWV3Qm94PSIwIDAgOSA3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNy41MzQ4NCAwLjQwMTEyM0M4LjM2MzA4IDAuNDAxMTIzIDguODMyMyAxLjM1MDMyIDguMzI5MzUgMi4wMDgzN0w1LjQ1MTE2IDUuNzc0MTdDNS4wNTA5MSA2LjI5Nzg1IDQuMjYyMzcgNi4yOTc4NCAzLjg2MjEzIDUuNzc0MTdMMC45ODM5MzIgMi4wMDgzN0MwLjQ4MDk4OCAxLjM1MDMyIDAuOTUwMjA4IDAuNDAxMTIzIDEuNzc4NDUgMC40MDExMjNMNy41MzQ4NCAwLjQwMTEyM1oiIGZpbGw9IiM0NzgxRkYiLz4KPC9zdmc+Cg==');
+        background-position: right 2.7rem top 50%;
+        font-size: var(--body-font-p-16);
+        background-repeat: no-repeat;
+        background-size: auto;
+        line-height: 19.2px;
+        font-weight: 700;
+        max-width: none;
     }
     
     .section.form-container.popup-donate-container-container .popup-donate-container-wrapper p {

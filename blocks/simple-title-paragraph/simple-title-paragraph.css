@@ -5,6 +5,16 @@ main > .section.simple-title-paragraph-container {
     margin: 80px auto 0;
 }
 
+.simple-title-paragraph.program-paragraph.paragraph-bold.block p:last-child,
+.simple-title-paragraph.program-paragraph.paragraph-bold.block p:nth-child(16) {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.simple-title-paragraph.program-paragraph.paragraph-bold.block p:nth-child(16) {
+    margin-top: 5px;
+}
+
 .simple-title-paragraph-container .simple-title-paragraph-wrapper {
     max-width: var(--layout-content);
 }
@@ -50,14 +60,9 @@ main > .section.simple-title-paragraph-container {
     line-height: 22.5px;
 }
 
-.simple-title-paragraph.program-paragraph.block p:last-child,
-.simple-title-paragraph.program-paragraph.block p:nth-child(16) {
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-.simple-title-paragraph.program-paragraph.block p:nth-child(16) {
-    margin-top: 5px;
+.simple-title-paragraph.program-paragraph.block p:nth-last-child(0n+1),
+.simple-title-paragraph.program-paragraph.block p:nth-last-child(0n+2) {
+    margin: 0;
 }
 
 .simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.center.block div div,
