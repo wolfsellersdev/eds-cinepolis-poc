@@ -43,6 +43,12 @@ export default async function decorate(block) {
     }
   });
 
+  if (window.innerWidth <= 768) {
+    fragment.children[0].addEventListener('click', () => {
+      ulTarget.parentElement.parentElement.parentElement.parentElement.style.display = 'flex';
+    });
+  }
+
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
   block.append(nav);
