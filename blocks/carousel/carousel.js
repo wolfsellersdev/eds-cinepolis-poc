@@ -42,8 +42,6 @@ export default async function decorate(block) {
   if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
     if (window.innerWidth <= 768) {
       cardsToShow = 1;
-      parentElement.removeChild(btnLeft);
-      parentElement.removeChild(btnRight);
     }
     block.addEventListener('touchstart', (e) => {
       const touchObj = e.changedTouches[0];
