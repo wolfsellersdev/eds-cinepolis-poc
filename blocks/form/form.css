@@ -678,6 +678,11 @@ main > .section.form-container {
         justify-content: center;
     }
 
+    .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child {
+        position: relative;
+        margin-bottom: 57px;
+    }
+    
     .section.form-container .form-container-wrapper:first-child .form-container.block >div:first-child div {
         width: 100%;
         text-align: center;
@@ -806,11 +811,6 @@ main > .section.form-container {
     .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block {
         padding: 24px;
         border-radius: var(--radius-items) var(--radius-items) 0 0;
-    }
-
-    .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child {
-        position: relative;
-        margin-bottom: 57px;
     }
 
     .section.form-container.popup-donate-container-container .popup-donate-container-wrapper .popup-donate-container.block >div:first-child div:last-child {

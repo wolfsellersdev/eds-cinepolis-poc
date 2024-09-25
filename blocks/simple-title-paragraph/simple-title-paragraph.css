@@ -10,6 +10,13 @@ main > .section.simple-title-paragraph-container {
     font-weight: 500;
 }
 
+.simple-title-paragraph-container h2 {
+    margin: 0 0 19px;
+    font-size: var(--heading-font-size-xl);
+    line-height: 40px;
+    font-weight: 800;
+}
+
 .simple-title-paragraph.left.block h2,
 .simple-title-paragraph.left.block p {
     text-align: left;
@@ -41,13 +48,6 @@ main > .section.simple-title-paragraph-container {
 
 .simple-title-paragraph-container .simple-title-paragraph-wrapper {
     max-width: var(--layout-content);
-}
-
-.simple-title-paragraph-container h2 {
-    margin: 0 0 19px;
-    font-size: var(--heading-font-size-xl);
-    line-height: 40px;
-    font-weight: 800;
 }
 
 .simple-title-paragraph.program-paragraph.block h2 {
