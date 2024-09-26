@@ -103,6 +103,11 @@
         min-width: 342px;
     }
 
+    .media-side-text.block > div div:last-child >p:first-child img {
+        display: flex;
+        margin: 0 auto;
+    }
+
     .media-side-text.block  .button-container {
         display: flex;
         justify-content: center;
