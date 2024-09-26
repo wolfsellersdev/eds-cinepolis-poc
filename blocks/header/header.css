@@ -203,20 +203,124 @@ header .default-content-wrapper >ul > li:hover {
         height: 72px;
     }
 
+    header.header-wrapper .header.block {
+        padding: 24px 0;
+    }
+
+    #nav {
+        display: grid;
+        width: 100%;
+        justify-content: unset;
+        grid-template-areas: "mobileheader";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     #nav .section:first-child {
-        display: block;
+        display: grid;
+        grid-row-start: 1;
+        grid-column-end: span 1;
+        grid-column-start: 1;
+        padding-left: 32px;
+        z-index: 1;
+    }
+
+    #nav >.section:nth-child(2) {
+        z-index: 1;
+        width: 100%;
+        grid-column: 1 / 5;
+        grid-row-start: 3;
+        margin: 10px 0 0 0;
+        box-sizing: border-box;
+    }
+
+    #nav .section .default-content-wrapper >ul >li:nth-child(2) > ul button {
+        top: 12px;
+        right: 24px;
+    }
+
+    #nav .section .default-content-wrapper >ul >li:nth-child(2) > ul button::before {
+        margin: 0;
+        content: '';
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        background: var(--color-link-15);
+        border-radius: var(--radius-12);
+        z-index: -1;
+        right: 10px;
+    }
+
+    #nav >.section:first-child .default-content-wrapper >ul {
+        flex-direction: column;   
+    }
+
+    #nav .section:nth-child(2) .default-content-wrapper ul:first-child >li:last-child ul li ul li:first-child {
+        text-align: center;
+    }
+
+    #nav .section:nth-child(2) .default-content-wrapper {
+        /* display: grid; */
+        justify-content: flex-start;
+        flex-direction: row;
+        overflow-y: scroll;
+    }
+
+    #nav .section:nth-child(2) .default-content-wrapper,
+    #nav .section:nth-child(4) .default-content-wrapper {
+        flex-direction: column;
     }
 
     #nav >.section:nth-child(2),
     #nav >.section:nth-child(4) {
+        width: 100%;
         display: none;
+        /* display: flex; SE PONE ESTE FLEX PARA AMBOS HIJOS 2 Y 4 SE DEBEN OCULTAR CON SCRIPT */
+        flex-direction: column;
+        background: var(--color-primary); 
     }
 
-    #nav >.section:first-child .default-content-wrapper >ul {
+    #nav >.section:nth-child(4) {
+        z-index: 1;
+        grid-row-start: 4;
+        grid-column:1 / 5;
+    }
+
+    #nav .section:last-child {
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 32px;
+    }
+
+    #nav .section ul {
         flex-direction: column;
     }
 
-    #nav .section .default-content-wrapper >ul >li:nth-child(2) > ul {
-        padding: 77px 25px 0;
+    #nav .section ul li {
+        width: 100%;
+        box-sizing: border-box;
+        border-bottom: 1px solid var(--color-gray45); 
     }
+
+    #nav .section ul >li:nth-child(2) >ul >li {
+        min-width: 208px;
+    }
+
+    #nav .section .default-content-wrapper >ul >li:nth-child(2) > ul {
+        padding: 24px;
+        display: flex;
+        position: unset;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        flex-direction: row;
+        overflow-y: scroll;
+    }
+
+    #nav .section .default-content-wrapper ul li ul li ul li {
+        border: 0;
+    }
+
+    /* header .default-content-wrapper >ul > li:hover {
+        Se pone posición ABSOLUTA para sacar del los demas li 
+    } */
 }
