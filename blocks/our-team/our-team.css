@@ -110,7 +110,7 @@ main > .section.our-team-container .our-team-wrapper {
     }
 
     .section.our-team-container .our-team.block >div:not(:first-child) div:last-child {
-        min-height: 263px;
+        min-height: auto;
         padding: 24px;
         flex: 1;
     }
@@ -119,12 +119,13 @@ main > .section.our-team-container .our-team-wrapper {
         font-size: var(--body-font-p-24);
         line-height: var(--body-font-p-24);
         font-weight: 600;
-        margin: 0;
+        margin: 0 0 10px;
     }
     
     .section.our-team-container .our-team.block >div:not(:first-child) div:last-child > p:not(:last-child) {
         font-size: var(--body-font-p-16);
         line-height: 20px;
+        margin: 0 0 24px;
         font-weight: 400;
     }
     

@@ -5,8 +5,9 @@ main > .section.simple-title-paragraph-container {
     margin: 80px auto 0;
 }
 
-.simple-title-paragraph-container .simple-title-paragraph-wrapper {
-    max-width: var(--layout-content);
+.simple-title-paragraph-container p {
+    line-height: 25px;
+    font-weight: 500;
 }
 
 .simple-title-paragraph-container h2 {
@@ -16,29 +17,9 @@ main > .section.simple-title-paragraph-container {
     font-weight: 800;
 }
 
-.simple-title-paragraph.program-paragraph.block h2 {
-    width: 100%;
-    text-align: left;
-    margin-bottom: 38px;
-}
-
-.simple-title-paragraph-container p {
-    line-height: 25px;
-    font-weight: 500;
-}
-
 .simple-title-paragraph.left.block h2,
 .simple-title-paragraph.left.block p {
     text-align: left;
-}
-
-.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.center.block div div h2 {
-    margin-bottom: 25px;
-}
-
-.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.block div div {
-    display: flex;
-    flex-direction: column;
 }
 
 .simple-title-paragraph.program-paragraph.block p {
@@ -50,14 +31,38 @@ main > .section.simple-title-paragraph-container {
     line-height: 22.5px;
 }
 
-.simple-title-paragraph.program-paragraph.block p:last-child,
-.simple-title-paragraph.program-paragraph.block p:nth-child(16) {
+.simple-title-paragraph.program-paragraph.block p:nth-last-child(0n+1),
+.simple-title-paragraph.program-paragraph.block p:nth-last-child(0n+2) {
+    margin: 0;
+}
+
+.simple-title-paragraph.program-paragraph.paragraph-bold.block p:last-child,
+.simple-title-paragraph.program-paragraph.paragraph-bold.block p:nth-child(16) {
     font-weight: 500;
     margin-bottom: 0;
 }
 
-.simple-title-paragraph.program-paragraph.block p:nth-child(16) {
+.simple-title-paragraph.program-paragraph.paragraph-bold.block p:nth-child(16) {
     margin-top: 5px;
+}
+
+.simple-title-paragraph-container .simple-title-paragraph-wrapper {
+    max-width: var(--layout-content);
+}
+
+.simple-title-paragraph.program-paragraph.block h2 {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 38px;
+}
+
+.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.center.block div div h2 {
+    margin-bottom: 25px;
+}
+
+.simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.block div div {
+    display: flex;
+    flex-direction: column;
 }
 
 .simple-title-paragraph-container .simple-title-paragraph-wrapper .simple-title-paragraph.center.block div div,
