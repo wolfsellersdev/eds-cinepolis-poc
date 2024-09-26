@@ -34,6 +34,12 @@ export default async function decorate(block) {
   targetLink.addEventListener('mouseover', () => {
     ulTarget.style.display = 'flex';
   });
+  targetLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    targetLink.classList.add('active');
+    targetLink.parentElement.parentElement
+      .classList.add('mobile-content');
+  });
 
   window.addEventListener('click', (e) => {
     if (e.target !== ulTarget
@@ -45,7 +51,10 @@ export default async function decorate(block) {
 
   if (window.innerWidth <= 768) {
     fragment.children[0].addEventListener('click', () => {
-      ulTarget.parentElement.parentElement.parentElement.parentElement.style.display = 'flex';
+      const parent1 = ulTarget.parentElement.parentElement.parentElement.parentElement;
+      const parent2 = parent1.parentElement.children[3];
+      parent1.style.display = 'flex';
+      parent2.style.display = 'flex';
     });
   }
 
