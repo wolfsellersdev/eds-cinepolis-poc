@@ -30,9 +30,10 @@ main > .section.media-side-text-basic-container {
 }
 
 .media-side-text-basic.block div p {
-    font-size: var(--body-font-p-18);
-    line-height: 22.5px;
-    font-weight: 400;
+    font-size: var(--body-font-p-12);
+    line-height: 14.4px;
+    font-weight: 600;
+    margin: 9px 0 0;
 }
 
 .media-side-text-basic.block >div div:nth-child(2) h2:first-child + p,

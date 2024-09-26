@@ -49,9 +49,8 @@ header.header-wrapper .header.block {
 }
 
 #nav .section:nth-child(2) {
-    width: 100%;
     display: flex;
-    flex:1 ;
+    width: auto;
 }
 
 #nav .section:nth-child(2) .default-content-wrapper {
@@ -60,10 +59,15 @@ header.header-wrapper .header.block {
 }
 
 #nav .section:nth-child(3) {
-    width: 100%;
     display: flex;
     justify-content: center;
-    flex:1 ;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#nav .section:nth-child(3) .button-container {
+    transform: translate(-20px, 7px);
 }
 
 #nav .section:last-child {
@@ -249,6 +253,10 @@ header .default-content-wrapper >ul > li:hover {
         right: 10px;
     }
 
+    #nav .section:nth-child(3) .button-container {
+        transform: none;
+    }
+
     #nav .section ul {
         flex-direction: column;
     }
@@ -261,6 +269,24 @@ header .default-content-wrapper >ul > li:hover {
         width: 100%;
         box-sizing: border-box;
         border-bottom: 1px solid var(--color-gray45); 
+    }
+
+    #nav .section ul li.active {
+        padding: 0;
+        background-color: var(--color-primary);
+    }
+
+    #nav .section ul li.active >a {
+        font-size: var(--body-font-p-28);
+        line-height: var(--body-font-p-28);
+        font-weight: 800;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    #nav .section ul li.active ul li {
+        border: none;
     }
 
     #nav .section ul >li:nth-child(2) >ul >li {
@@ -319,7 +345,8 @@ header .default-content-wrapper >ul > li:hover {
         overflow-y: scroll;
     }
 
-    /* header .default-content-wrapper >ul > li:hover {
-        Se pone posición ABSOLUTA para sacar del los demas li 
-    } */
+    #nav .default-content-wrapper.mobile-content {
+        height: 100vh;
+        background: var(--color-primary);
+    }
 }
