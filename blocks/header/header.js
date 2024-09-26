@@ -34,6 +34,12 @@ export default async function decorate(block) {
   targetLink.addEventListener('mouseover', () => {
     ulTarget.style.display = 'flex';
   });
+  targetLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    targetLink.classList.add('active');
+    targetLink.parentElement.parentElement
+      .classList.add('mobile-content');
+  });
 
   window.addEventListener('click', (e) => {
     if (e.target !== ulTarget
