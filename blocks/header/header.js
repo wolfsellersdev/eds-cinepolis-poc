@@ -45,7 +45,10 @@ export default async function decorate(block) {
 
   if (window.innerWidth <= 768) {
     fragment.children[0].addEventListener('click', () => {
-      ulTarget.parentElement.parentElement.parentElement.parentElement.style.display = 'flex';
+      const parent1 = ulTarget.parentElement.parentElement.parentElement.parentElement;
+      const parent2 = parent1.parentElement.children[3];
+      parent1.style.display = 'flex';
+      parent2.style.display = 'flex';
     });
   }
 
